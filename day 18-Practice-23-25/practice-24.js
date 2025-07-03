@@ -50,24 +50,24 @@
 
 /* Q. Implement a function that limits how many times another function can be called (Closure + HOF). */
 
-function funlimiter(fn, limit) {
-    let totalCalled = 0;
-    return function () {
-        if (totalCalled < limit) {
-            totalCalled++;
-            fn();
-        }
-        else {
-            console.error('Limit! reached dear, pay 1000rs. for more.');
-        }
-    }
-}
+// function funlimiter(fn, limit) {
+//     let totalCalled = 0;
+//     return function () {
+//         if (totalCalled < limit) {
+//             totalCalled++;
+//             fn();
+//         }
+//         else {
+//             console.error('Limit! reached dear, pay 1000rs. for more.');
+//         }
+//     }
+// }
 
-let run = funlimiter(function () {
-    console.log('shirley, Love you');
-}, 3);
+// let run = funlimiter(function () {
+//     console.log('shirley, Love you');
+// }, 3);
 
-run(); // run
-run(); // run
-run(); // run
-run(); // run but else part
+// run(); // run
+// run(); // run
+// run(); // run
+// run(); // run but else part
