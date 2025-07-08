@@ -69,22 +69,22 @@ OP - RRR is a Super Hit. */
 
 //  Q3. Write a program to calculate the salary as per the following table.
 
-let gender = prompt('Enter your Gender:');
-let experience = Number(prompt('Enter your experience in number:'));
-let qualification = prompt('Enter your qualification:');
+// let gender = prompt('Enter your Gender:');
+// let experience = Number(prompt('Enter your experience in number:'));
+// let qualification = prompt('Enter your qualification:');
 
-if (gender === 'male' && qualification === 'post graduate' && experience >=10) console.log('Salary 15000rs.');
+// if (gender === 'male' && qualification === 'post graduate' && experience >=10) console.log('Salary 15000rs.');
 
-else if ((gender === 'male' && qualification === 'graduate' && experience >=10) || (gender === 'male' && qualification === 'post graduate' && experience < 10) || (gender === 'female' && qualification === 'post graduate' && experience < 10)) console.log('Salary 10000rs.');
+// else if ((gender === 'male' && qualification === 'graduate' && experience >=10) || (gender === 'male' && qualification === 'post graduate' && experience < 10) || (gender === 'female' && qualification === 'post graduate' && experience < 10)) console.log('Salary 10000rs.');
 
-else if ((gender === 'male' && qualification === 'graduate' && experience < 10)) console.log('Salary 7000rs.');
+// else if ((gender === 'male' && qualification === 'graduate' && experience < 10)) console.log('Salary 7000rs.');
 
-else if (gender === 'female' && qualification === 'post graduate' && experience >=10) console.log('Salary 12000rs.');
+// else if (gender === 'female' && qualification === 'post graduate' && experience >=10) console.log('Salary 12000rs.');
 
-else if (gender === 'female' && qualification === 'graduate' && experience >=10) console.log('Salary 9000rs.');
+// else if (gender === 'female' && qualification === 'graduate' && experience >=10) console.log('Salary 9000rs.');
 
-else if (gender === 'female' && qualification === 'graduate' && experience < 10) console.log('Salary 6000rs.');
+// else if (gender === 'female' && qualification === 'graduate' && experience < 10) console.log('Salary 6000rs.');
 
-else {
-  console.log('Invalid input or no matching criteria.');
-}
+// else {
+//   console.log('Invalid input or no matching criteria.');
+// }
