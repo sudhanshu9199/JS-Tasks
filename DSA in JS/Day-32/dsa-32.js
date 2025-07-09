@@ -278,3 +278,24 @@ Example: Input: N = 4
 Output: 33
 
 Hint: Use a loop and maintain a sum for even-indexed elements. */
+
+
+
+/* Q13. Find LCM of Two Numbers
+Description: Find the Least Common Multiple (LCM) of two numbers.
+Example: Input: a = 12, b = 1S
+Output: 60
+Hint: LCM can be found using the formula: LCM(a, b) = (a × b) / GCD(a, b). */
+
+
+/* 15. Number of Days in a Month
+Description: Find the number of days in a given month and year (to handle leap 
+years).
+Example: Input: Month = 2, Year = 2024
+Output: 29
+
+Hint: Use conditions:
+- 31 Days: Jan, Mar, May, Jul, Aug, Oct, Dec.
+- 30 Days: Apr, Jun, Sep, Nov.
+- February: 28 or 29 (check for leap year using year % 4 == 0 but not year % 
+100 != 0 unless year % 400 == 0) */
