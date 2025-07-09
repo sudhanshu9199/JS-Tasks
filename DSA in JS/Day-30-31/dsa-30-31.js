@@ -1,14 +1,7 @@
 /*
 Session 3:
 -Loop
--For loop
-
-
-
-
-
-
- */
+-For loop */
 
 /* Q1. Accept an integer and Print hello world n times */
 
@@ -210,3 +203,5 @@ Q.strong number */
 // else console.log('it is not an automorphic number.');
 
 
+
+/* Q.  */
