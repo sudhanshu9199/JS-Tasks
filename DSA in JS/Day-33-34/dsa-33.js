@@ -70,7 +70,7 @@ A B C D E */
 // let ans = uinput('Enter row value: ');
 // for (let i = 1; i <= ans; i++) {
 //     for (let j = 1; j <= i; j++) {
-//         process.stdout.write(String.fromCharCode(65 + (j - 1) + " "));
+//         process.stdout.write(String.fromCharCode(65 + (j - 1)) + " ");
 //     }
 //     console.log();
     
