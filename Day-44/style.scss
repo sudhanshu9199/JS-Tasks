@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.day-40-task1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  img {
+    width: 22rem;
+  }
+  button {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem 3rem;
+    letter-spacing: 0.2rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #f756f4, #46affa);
+    color: whitesmoke;
+  }
+  button:active {
+    scale: 0.95;
+  }
+}
+
+.day-44-task2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .btn2 {
+        padding: 0.5rem 1rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        font-size: 2rem;
+        background: linear-gradient(to right, #9b24ef, #2f9bfa);
+        color: whitesmoke;
+        border-radius: 1.5rem;
+        z-index: 1;
+    }
+    .btn2:active {
+        scale: 0.95;
+    }
+    .img2 {
+        height: 10rem;
+        position: absolute;
+    }
+}
+
+.day-44-p2 {
+    #box {
+        width: 12rem;
+        height: 12rem;
+        background: lightseagreen;
+    }
+}

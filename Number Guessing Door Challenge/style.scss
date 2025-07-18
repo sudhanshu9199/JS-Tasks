@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+
+header {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+        line-height: 1;
+        font-size: 2rem;
+// font-family: "TikTok Sans", sans-serif;
+    }
+}
+
+main {
+    user-select: none;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0 0.5rem;
+
+    .input-div{
+        border: 1.5px solid black;
+        padding: 0.5rem 0 0.5rem 0.3rem;
+        width: fit-content;
+        font-size: 1.2rem;
+        #user-input {
+            border: none;
+            font-size: 1.2rem;
+            width: fit-content;
+        }
+    }
+
+    .sub-line {
+        margin: 0.7rem 0 5rem 0;
+        font-size: 1.3rem;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+        .left-vertical{
+            writing-mode:sideways-lr;
+            font-family: "TikTok Sans", sans-serif;
+            font-weight: 600;
+        }
+
+        .doors {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .message-display {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        
+        .message {
+            border: 2px solid red;
+            width: 70%;
+            padding: 1rem 3rem;
+            text-align: center;
+            border-radius: 15px;
+
+        }
+    }
+}

@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem;
+}
+header h1 {
+  font-family: "UoqMunThenKhung", serif;
+  font-size: 1.8rem;
+  color: white;
+  letter-spacing: 0.15rem;
+}
+header .score-display {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fbe512;
+}
+header .score-display span {
+  font-weight: 600;
+}
+
+.lower {
+  width: 100%;
+  height: 100%;
+  background: #0596ef;
+  position: relative;
+}
+.lower .bg-circle {
+  background: #12a9fa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  border: 5px solid rgba(5, 149, 239, 0.1058823529);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+main {
+  width: 100%;
+}
+main .container1 {
+  width: 100%;
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+main .container1 .timer-display {
+  font-weight: 600;
+  font-size: 1.4rem;
+  border: 7px solid #fbe512;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  color: #fbe512;
+}
+main .container2 {
+  width: 100%;
+  height: 75vh;
+  padding: 0.8rem;
+  position: relative;
+}
+main .container2 .movingBox {
+  width: 5.5rem;
+  height: 3.2rem;
+  overflow: hidden;
+  cursor: pointer;
+  background: #edb169;
+  padding: 0.1rem;
+  position: absolute;
+  transition: all 0.2s ease;
+  z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+main .container2 .movingBox img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0% 60%;
+     object-position: 0% 60%;
+  height: 80%;
+  width: 90%;
+  background: #fd3e3c;
+}
+main .container2 .movingBox:active {
+  scale: 0.9;
+}
+main .btn-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+main .btn {
+  background: #FC3A3A;
+  color: whitesmoke;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+main .btn:active {
+  scale: 0.95;
+}/*# sourceMappingURL=style.css.map */
