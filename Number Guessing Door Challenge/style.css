@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   font-family: "Roboto Condensed", sans-serif;
@@ -30,37 +31,115 @@ main {
   padding: 0 0.5rem;
 }
 main .input-div {
-  border: 1.5px solid black;
-  padding: 0.5rem 0 0.5rem 0.3rem;
+  border: 1.5px solid #3498db;
+  padding: 0.6rem 0.8rem 0.6rem 0.7rem;
+  border-radius: 10px;
   width: -moz-fit-content;
   width: fit-content;
   font-size: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  background: #ecf0f1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 main .input-div #user-input {
   border: none;
+  background: #ecf0f1;
   font-size: 1.2rem;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 120px;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+main .input-div #user-input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(208, 208, 208, 0.5);
+}
+main .input-div label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-right: 10px;
+}
+main .input-div button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background: #07bc01;
+  color: rgb(226, 226, 226);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+main .input-div button:hover {
+  transform: translateY(-2px);
+}
+main .input-div button:active {
+  background: #05a500;
+  scale: 0.9;
+}
+main .input-div #reset-btn {
+  background: #e74c3c;
+  margin-left: 15px;
+}
+main .input-div #reset-btn:active {
+  background: #c0392b;
 }
 main .sub-line {
   margin: 0.7rem 0 5rem 0;
   font-size: 1.3rem;
+  color: #2c3e50;
 }
 main .container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
 }
 main .container .left-vertical {
+  width: 5%;
   writing-mode: sideways-lr;
   font-family: "TikTok Sans", sans-serif;
   font-weight: 600;
 }
 main .container .doors {
+  width: 95%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+}
+main .container .doors .door {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+main .container .doors .door p {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  background-color: rgba(52, 152, 219, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+main .container .doors .door .revealed p {
+  background-color: rgba(46, 204, 113, 0.2);
+}
+main .container .doors .door .revealed.correct p {
+  background: rgba(46, 204, 113, 0.4);
+  animation: pulse 1.5s infinite;
+}
+main .container .doors .door img {
+  width: 90%;
 }
 main .message-display {
   padding: 2rem;
@@ -68,9 +147,61 @@ main .message-display {
   justify-content: center;
 }
 main .message-display .message {
-  border: 2px solid red;
-  width: 70%;
+  border: 2px solid #3498db;
+  width: 80%;
   padding: 1rem 3rem;
   text-align: center;
   border-radius: 15px;
+  font-size: 1.6rem;
+  background-color: rgba(236, 240, 241, 0.8);
+  transition: all 0.5s ease;
+}
+main .message-display .message.correct {
+  border-color: #07bc01;
+  background-color: rgba(7, 188, 1, 0.1);
+  color: #07bc01;
+}
+main .message-display .message.incorrect {
+  border-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+}
+main .instructions {
+  background-color: rgba(52, 152, 219, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 30px;
+  border-left: 5px solid #3498db;
+}
+main .instructions h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+main .instructions ul {
+  padding-left: 25px;
+}
+main .instructions li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=style.css.map */

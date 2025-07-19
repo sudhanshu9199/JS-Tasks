@@ -1,36 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guessing Game</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&family=UoqMunThenKhung&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>Number Guessing <br> Door Challenge</h1>
-    </header>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&family=UoqMunThenKhung&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="game-container">
+      <header>
+        <h1>
+          Number Guessing <br />
+          Door Challenge
+        </h1>
+        <div class="toggle"></div>
+      </header>
 
-    <main>
-        <div class="input-div">
-            <label for="user-input">Input: </label>
-            <input type="number" id="user-input" placeholder="like: 7">
-        </div>
-        <p class="sub-line">Choose a door!</p>
+      <main>
+        <form class="input-div">
+          <label for="user-input">Input: </label>
+          <input
+            type="number"
+            id="user-input"
+            placeholder="e.g., 7"
+            required
+            min="1"
+            max="10"
+          />
+          <button type="submit">Submit</button>
+          <button type="button" id="reset-btn">Reset Game</button>
+        </form>
+        <p class="sub-line">Choose a door to reveal after guessing!</p>
         <div class="container">
-            <p class="left-vertical">Attempts: <span>3/5</span></p>
-            <div class="doors">
-                <div class="door"></div>
-                <div class="door"></div>
-                <div class="door"></div>
+          <p class="left-vertical">
+            Attempts: <span id="attempt-counter">0/3</span>
+          </p>
+          <div class="doors">
+            <div class="door" data-number="">
+              <img src="/door 1.png" alt="" />
+              <p>Door 1</p>
             </div>
+            <div class="door" data-number="">
+              <img src="/door 2.png" alt="" />
+              <p>Door 2</p>
+            </div>
+            <div class="door" data-number="">
+              <img src="/door 3.png" alt="" />
+              <p>Door 3</p>
+            </div>
+          </div>
         </div>
-        
+
         <div class="message-display">
-            <p class="message">Start the Game</p>
+          <p class="message">Enter a number between 1-10 and click Submit!</p>
         </div>
-    </main>
+
+        <div class="instructions">
+          <h3>How to Play:</h3>
+          <ul>
+            <li>A secret number (1-10) is hidden behind one of the doors</li>
+            <li>Enter your guess in the input field and click Submit</li>
+            <li>You have 3 attempts to find the correct number</li>
+            <li>After each guess, you'll get feedback on your attempt</li>
+            <li>When the game ends, all doors will be revealed</li>
+            <li>Click "Reset Game" to play again</li>
+          </ul>
+        </div>
+      </main>
+
+      <div class="footer">
+        <p>
+          Number Guessing Door Challenge | by SUDHANSHU GHOSH
+        </p>
+      </div>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

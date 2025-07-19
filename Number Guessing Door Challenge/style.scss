@@ -1,80 +1,258 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html, body {
-    height: 100%;
-    width: 100%;
-    font-family: "Roboto Condensed", sans-serif;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
+// .game-container {
+//   background-color: rgba(172, 83, 83, 0.95);
+//   border-radius: 20px;
+//   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+//   width: 100%;
+//   max-width: 900px;
+//   // padding: 30px;
+//   position: relative;
+//   overflow: hidden;
+// }
 
 header {
-    width: 100%;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    h1 {
-        line-height: 1;
-        font-size: 2rem;
-// font-family: "TikTok Sans", sans-serif;
-    }
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  h1 {
+    line-height: 1;
+    font-size: 2rem;
+    // font-family: "TikTok Sans", sans-serif;
+  }
 }
 
 main {
-    user-select: none;
+  user-select: none;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0 0.5rem;
+
+  .input-div {
+    border: 1.5px solid #3498db;
+    padding: 0.6rem 0.8rem 0.6rem 0.7rem;
+    border-radius: 10px;
+    // padding: 0.8rem 1rem;
+    width: fit-content;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    background: #ecf0f1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    #user-input {
+      // border: 2px solid #3498db;
+      border: none;
+      background: #ecf0f1;
+      font-size: 1.2rem;
+      width: 120px;
+      padding: 0.5rem;
+      border-radius: 8px;
+      margin-right: 5px;
+      // text-align: center;
+      transition: all 0.3s ease;
+    }
+    #user-input:focus {
+      outline: none;
+      // border-color: #e74c3c;
+      box-shadow: 0 0 8px rgba(208, 208, 208, 0.5);
+    }
+
+    label {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-right: 10px;
+    }
+
+    button {
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      background: #07bc01;
+      color: rgb(226, 226, 226);
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    button:hover {
+      transform: translateY(-2px);
+    }
+    button:active {
+      background: #05a500;
+      scale: 0.9;
+    }
+    #reset-btn {
+      background: #e74c3c;
+      margin-left: 15px;
+    }
+    #reset-btn:active {
+      background: #c0392b;
+    }
+  }
+
+  .sub-line {
+    margin: 0.7rem 0 5rem 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+  }
+
+  .container {
     width: 100%;
-    margin-top: 2rem;
-    padding: 0 0.5rem;
-
-    .input-div{
-        border: 1.5px solid black;
-        padding: 0.5rem 0 0.5rem 0.3rem;
-        width: fit-content;
-        font-size: 1.2rem;
-        #user-input {
-            border: none;
-            font-size: 1.2rem;
-            width: fit-content;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    .left-vertical {
+      width: 5%;
+      writing-mode: sideways-lr;
+      font-family: "TikTok Sans", sans-serif;
+      font-weight: 600;
+      // padding: 15px 0;
     }
 
-    .sub-line {
-        margin: 0.7rem 0 5rem 0;
-        font-size: 1.3rem;
-    }
+    .doors {
+      width: 95%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
 
-    .container {
+      .door {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        margin-bottom: 3rem;
-        .left-vertical{
-            writing-mode:sideways-lr;
-            font-family: "TikTok Sans", sans-serif;
-            font-weight: 600;
+        font-size: 1.3rem;
+        cursor: pointer;
+
+        p {
+          font-weight: 600;
+          color: #2c3e50;
+          font-size: 1.4rem;
+          text-align: center;
+          padding: 10px 0;
+          width: 100%;
+          background-color: rgba(52, 152, 219, 0.1);
+          border-radius: 8px;
+          transition: all 0.3s ease;
+        }
+        .revealed p {
+          background-color: rgba(46, 204, 113, 0.2);
         }
 
-        .doors {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+        .revealed.correct p {
+          background: rgba(46, 204, 113, 0.4);
+          animation: pulse 1.5s infinite;
         }
+
+        img {
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  .message-display {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+
+    .message {
+      border: 2px solid #3498db;
+      width: 80%;
+      padding: 1rem 3rem;
+      text-align: center;
+      border-radius: 15px;
+      font-size: 1.6rem;
+      background-color: rgba(236, 240, 241, 0.8);
+      transition: all 0.5s ease;
     }
 
-    .message-display {
-        padding: 2rem;
-        display: flex;
-        justify-content: center;
-        
-        .message {
-            border: 2px solid red;
-            width: 70%;
-            padding: 1rem 3rem;
-            text-align: center;
-            border-radius: 15px;
-
-        }
+    .message.correct {
+      border-color: #07bc01;
+      background-color: rgba(7, 188, 1, 0.1);
+      color: #07bc01;
     }
+
+    .message.incorrect {
+      border-color: #e74c3c;
+      background-color: rgba(231, 76, 60, 0.1);
+      color: #e74c3c;
+    }
+  }
+
+  .instructions {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 30px;
+    border-left: 5px solid #3498db;
+  }
+
+  .instructions h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+
+  .instructions ul {
+    padding-left: 25px;
+  }
+
+  .instructions li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #34495e;
+  }
 }
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// @keyframes confetti {
+//   0% {
+//     transform: translateY(0) rotate(0);
+//     opacity: 1;
+//   }
+//   100% {
+//     transform: translateY(100vh) rotate(720deg);
+//     opacity: 0;
+//   }
+// }
+
+// .confetti {
+//   position: fixed;
+//   width: 15px;
+//   height: 15px;
+//   background-color: #f1c40f;
+//   top: 0;
+//   opacity: 0;
+//   z-index: 1000;
+// }
