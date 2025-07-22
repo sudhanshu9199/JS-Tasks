@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.card {
+  background: rgb(231, 231, 231);
+  color: black;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  overflow: hidden;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.card img {
+  width: 13rem;
+  height: 13rem;
+  background: red;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.card .name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.card .status {
+  color: green;
+}/*# sourceMappingURL=style.css.map */
