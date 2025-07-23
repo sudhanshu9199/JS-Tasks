@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #dfe4e7;
+    padding: 0.5rem;
+}
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        font-family: "UoqMunThenKhung", serif;
+        letter-spacing: 0.1rem;
+    }
+}
+
+main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    padding: 2rem 5rem;
+    align-items: center;
+    justify-content: center;
+    .card {
+        background: #ffffff;
+        width: 70%;
+        border: 2px solid rgba(149, 149, 149, 0.644);
+        padding: 1rem;
+        font-family: "Inter", sans-serif;
+        width: 21rem;
+
+        .top-part {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .left {
+                color: whitesmoke;
+                background: #0be204;
+                border-radius: 1rem;
+                padding: 0.2rem 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        .bottom-part {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            img {
+                border-radius: 50%;
+                width: 8rem;
+                height: 8rem;
+                background: red;
+                object-fit: cover;
+                object-position: top;
+                box-shadow: 1px 1px 3px 1px rgb(205, 205, 205);
+                margin-bottom: 0.5rem;
+            }
+            .name {
+                font-weight: 600;
+            }
+            .role {
+                color: #767676;
+                font-size: 0.8rem;
+            }
+            .team-div {
+                color: rgb(4, 160, 160);
+                display: flex;
+                gap: 0.2rem;
+                font-size: 0.7rem;
+            }
+
+            .skills-div {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                 gap: 0.5rem;
+                 padding: 0.6rem 0;
+
+                 .skill {
+                    border: 2px solid rgb(182, 182, 182);
+                    padding: 0.2rem 0.8rem;
+                    border-radius: 2rem;
+                    font-size: 0.68rem;
+                    font-weight: 500;
+                 }
+            }
+
+            .bio {
+                text-align: center;
+                color: #767676;
+                font-size: 0.8rem;
+            }
+            hr {
+                width: 25%;
+                height: 1px;
+                margin: 0.7rem 0;
+            }
+
+            .btn {
+                text-align: center;
+                width: 80%;
+                padding: 0.7rem 3rem;
+                background: #00679f;
+                color: whitesmoke;
+                font-weight: 500;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            .btn:active {
+                scale: 0.92;
+                background: #006296;
+
+            }
+
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
