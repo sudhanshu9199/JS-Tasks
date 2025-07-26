@@ -44,4 +44,22 @@ html, body {
 }
 .card .status {
   color: green;
+}
+
+.b48-1 {
+  font-size: 2rem;
+}
+
+.third {
+  margin: 2rem;
+}
+.third button {
+  padding: 0.6rem 3rem;
+  font-size: 2rem;
+  cursor: pointer;
+  background: #383838;
+  color: whitesmoke;
+}
+.third .dones {
+  background: #107001;
 }/*# sourceMappingURL=style.css.map */
