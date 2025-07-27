@@ -66,5 +66,5 @@
 
 ---
 
-**Summary:**  
+**Summary:**
 This file demonstrates browser storage (local, session, cookies), navigation objects (`location`, `history`, `navigator`), and DOM manipulation techniques including class toggling
