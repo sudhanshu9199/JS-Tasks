@@ -62,8 +62,12 @@ Session 18:
 -Bitwise operator
 -Q 70.Swap two integers without using third variable
 -
--Q 72.check if the is power of 2 */
+- */
 
 /**Q 71.check even or odd */
 // let n = 25;
 // console.log((n&1) === 0 ? 'even' : 'Odd');
+
+/* Q 72.check if the is power of 2 */
+// let n = 32;
+// console.log((n & (n - 1)) === 0 ? 'Power of 2' : 'Not Power of 2');
