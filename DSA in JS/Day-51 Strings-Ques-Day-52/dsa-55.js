@@ -21,12 +21,39 @@
 /* Interview Application Example
 Q: "Given an array where every element appears twice except one, find that single one." */
 
-let arr = [22, 22, 4,5,88,4,74,57,5];
-let result = 0;
-for (let num of arr){
-    result = result ^ num;
-}
-console.log(result);
+// let arr = [2, 3, 3, 4, 8, 4, 2];
+// let result = 0;
+// for (let num of arr){
+//     result = result ^ num;
+// }
+// console.log(result);
+
+
+// let a = 5, b = a << 1; // left shift
+// console.log(b);
+
+// let x = 10, y = x >> 1; // right shift
+// console.log(y);
+
+/**Pseudocode */
+// // LEFT SHIFT PSEUDOCODE
+// function leftShift(num, shiftBy):
+//     return num * (2 ^ shiftBy)
+
+// // RIGHT SHIFT PSEUDOCODE
+// function rightShift(num, shiftBy):
+//     return floor(num / (2 ^ shiftBy))
+
+
+/**✅ Interview Questions
+Find if a number is even/odd using (n & 1)
+
+Multiply/divide without * or / using shifts
+
+Count bits in a number using bit shifts
+ */
+
+
 
 
 
