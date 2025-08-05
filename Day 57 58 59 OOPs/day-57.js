@@ -59,3 +59,37 @@ class Toffee {
 }
 let t1 = new Toffee('vanilla', 'whiteSmoke', 'sweet');
 let t2 = new Toffee('dark', 'black', 'sweet');
+
+
+/*
+Challenge:
+Create a "Person" using both styles (old and new). It should have:
+
+- 'name' and 'age' as properties
+- A method called 'greet()' that says: "Hi, I'm [name] and I'm [age] years old." */
+
+/* Old way */
+// function Person (name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
+
+// Person.prototype.greet = function () {
+//     console.log(`Hi, I'm ${this.name} and I'm ${this.age} years old.`);
+// }
+// const p1 = new Person('Harsh', 29);
+// p1.greet();
+
+/**New way */
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        console.log(`Hi, I'm ${this.name} and I'm ${this.age} years old.`);
+    }
+}
+const p1 = new Person('Hardik', 35);
+p1.greet();
