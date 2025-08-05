@@ -167,3 +167,8 @@ Great note on readability – ES6 classes are easier for humans to read.
 ---
 
 **👉 Try it for either the old or new style (or both if you're confident). I’ll review and give feedback.
+
+--- 
+
+## Author
+SUDHNASHU GHOSH

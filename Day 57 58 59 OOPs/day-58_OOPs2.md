@@ -57,3 +57,71 @@ console.log(acc.#balance); // ❌ Error! Private field
 
 - Prevent users/devs from messing with sensitive internal data (e.g., balance, password, tokens).
 - Enforce rules (e.g., no negative balance).
+
+
+## 📚 Your Turn Now
+
+### 1. Open-ended Question
+
+👉 **Why do you think encapsulation is important in software development?**
+
+---
+
+### 2. Mini Challenge
+
+**Build a `User` class that:**
+- Has a private password field (use `#password`)
+- Has a method `checkPassword(input)` that returns `true` if matched
+- Has a method `changePassword(oldPass, newPass)` to update password
+
+---
+
+### ✅ Review of Your Encapsulation Answer
+
+> “Encapsulation allows developers to hide internal implementation details and expose only necessary interfaces. This protects internal data from misuse and simplifies how others interact with the object.”
+
+---
+
+### 🔄 Corrected Full Example (with feedback):
+
+```javascript
+class User {
+  #password;
+
+  constructor(name, password) {
+    this.name = name;
+    this.#password = password;
+  }
+
+  checkPassword(input) {
+    return input === this.#password;
+  }
+
+  changePassword(oldPass, newPass) {
+    if (this.checkPassword(oldPass)) {
+      this.#password = newPass;
+      console.log("Password changed successfully.");
+    } else {
+      console.log("Old password is incorrect.");
+    }
+  }
+}
+
+const u1 = new User("Sudhanshu", "12345");
+console.log(u1.checkPassword("12345")); // true
+u1.changePassword("12345", "67890");
+console.log(u1.checkPassword("67890")); // true
+```
+
+---
+
+### ✅ Encapsulation: Final Summary
+
+- Use `#` to mark fields as private.
+- Use methods to control access.
+- This protects sensitive data and keeps logic clean.
+
+--- 
+
+## Author
+SUDHNASHU GHOSH
