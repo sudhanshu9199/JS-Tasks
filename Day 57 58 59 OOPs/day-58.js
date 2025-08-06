@@ -48,9 +48,23 @@ Has a method `changePassword(oldPass, newPass)` to update password */
 
 // sabse pahle property ko aapke object mein dhundhege nahi mila to prototype mein dhundte hai
 
-function Toffee(name) {
+// function Toffee(name) {
+//     this.name = name;
+//     this.price = 34;
+// }
+// Toffee.prototype.price = 10;
+// let t1 = new Toffee('Kaccha aam')
+
+/**Last example */
+function Employee(name, age, id, salary) {
     this.name = name;
-    this.price = 34;
+    this.age = age;
+    this.salary = salary;
+    this.id = id;
 }
-Toffee.prototype.price = 10;
-let t1 = new Toffee('Kaccha aam')
+
+Employee.prototype.printDetails = function () {
+    console.log(`${this.name} is my name, I am ${this.age} years old, my salary is ${this.salary}rs. and my ${this.id} is ID.`);
+}
+let e1 = new Employee('Sudhanshu', 21, 1123, 90000);
+console.log(e1); console.log(e1.printDetails());
