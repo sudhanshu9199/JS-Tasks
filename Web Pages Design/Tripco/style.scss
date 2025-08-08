@@ -211,12 +211,14 @@ nav {
             color: rgb(111, 111, 111);
         }
     }
-    .bottom{
+    .bottom2{
         margin-top: 1.5rem;
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
         .place {
+            width: fit-content;
             position: relative;
             .image {
                 width: 13rem;

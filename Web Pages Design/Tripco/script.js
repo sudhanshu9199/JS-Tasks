@@ -1,36 +1,48 @@
 const placesData = [
     {
         img: "/images/Hero.png",
-        discount: "20% OFF",
-        name: "SC.Shiv Nath",
-        location: "Kailash, Himalai"
+        discount: "10% OFF",
+        name: "Varanasi Ghats",
+        location: "Varanasi, Uttar Pradesh, IN"
     },
     {
         img: "/images/Hero2.png",
         discount: "15% OFF",
-        name: "SK.Vivek",
-        location: "Manali, Himachal"
+        name: "Golden Temple",
+        location: "Amritsar, Punjab, IN"
     },
     {
         img: "/images/Hero3.png",
         discount: "10% OFF",
-        name: "SS.Rahul",
-        location: "Darjeeling, West Bengal"
+        name: "Qutub Minar",
+        location: " Delhi, IN"
     },
     {
         img: "/images/Hero4.png",
         discount: "25% OFF",
-        name: "SR.Suman",
-        location: "Shimla, Himachal"
+        name: "Goa Beaches",
+        location: "Goa, Calangute, Baga, Anjuna, IN"
     },
     {
         img: "/images/Hero5.png",
         discount: "30% OFF",
-        name: "SJ.Ritika",
-        location: "Mussoorie, Uttarakhand"
+        name: "Backwaters of Kerala",
+        location: "Alleppey & Kumarakom, Kerala, IN"
+    },
+    {
+        img: "/images/Hero5.png",
+        discount: "30% OFF",
+        name: "Hampi Ruins",
+        location: "Hampi, Karnataka IN"
+    },
+    {
+        img: "/images/Hero5.png",
+        discount: "30% OFF",
+        name: "Hampi Ruins",
+        location: "Hampi, Karnataka IN"
     }
 ]
-let bottomContainer = document.querySelector('.bottom');
+let bottomContainer = document.querySelector('.bottom2');
 placesData.forEach(place => {
     const placeDiv = document.createElement('div');
     placeDiv.className = 'place';
