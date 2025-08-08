@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Outfit", sans-serif;
+  padding: 1.4rem 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(155, 160, 164);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav p {
+  font-weight: 800;
+  color: #14a5bf;
+}
+nav .mid {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+nav .mid a:nth-child(1) {
+  color: black;
+  font-weight: 600;
+}
+nav .mid a:active {
+  color: black;
+  font-weight: 600;
+}
+nav .right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+nav .right a:nth-child(2) {
+  background: #15abc5;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.heroic {
+  margin-top: 2rem;
+  width: 100%;
+  height: 70%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heroic .top-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  color: whitesmoke;
+  margin-top: 2.5rem;
+}
+.heroic .top-text p:nth-child(1) {
+  font-size: 2.7rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+}
+.heroic .top-text p:nth-child(1) .india {
+  background: linear-gradient(91deg, rgb(255, 104, 32) 16%, rgb(255, 255, 255) 48%, rgb(4, 106, 56) 83%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heroic .top-text p:nth-child(2) {
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+}
+.heroic img {
+  width: 95%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 2.5rem;
+}
+.heroic .bottom {
+  width: 80%;
+  background: white;
+  color: black;
+  border-radius: 0.7rem;
+  padding: 0.8rem;
+  position: absolute;
+  filter: drop-shadow(3px 8px 5px rgba(92, 92, 92, 0.326));
+  top: 84%;
+}
+.heroic .bottom .inner-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heroic .bottom .inner-top .left {
+  display: flex;
+  gap: 2rem;
+}
+.heroic .bottom .inner-top .left a:nth-child(1) {
+  color: black;
+  font-weight: 600;
+}
+.heroic .bottom .inner-top .right {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: gray;
+  font-size: 0.8rem;
+}
+.heroic .bottom hr {
+  margin: 0.8rem 0;
+}
+.heroic .bottom .inner-bottom {
+  width: 100%;
+}
+.heroic .bottom .inner-bottom .upper {
+  display: flex;
+  gap: 8rem;
+}
+.heroic .bottom .inner-bottom .down {
+  margin-top: 0.8rem;
+  display: flex;
+  margin-left: 0.8rem;
+  gap: 4rem;
+}
+.heroic .bottom .inner-bottom .down .down-parts {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #e5e5e5;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  border-radius: 0.4rem;
+}
+.heroic .bottom .inner-bottom .down .down-parts i {
+  color: #15abc5;
+}
+.heroic .bottom .inner-bottom .down .search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #15b6d2;
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 0.6rem;
+  margin-left: 11%;
+  cursor: pointer;
+}
+
+.section2 {
+  width: 100%;
+  margin-top: 12rem;
+}
+.section2 .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section2 .top .left p:nth-child(1) {
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+.section2 .top .right {
+  color: rgb(111, 111, 111);
+}
+.section2 .bottom {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.section2 .bottom .place {
+  position: relative;
+}
+.section2 .bottom .place .image {
+  width: 13rem;
+  height: 15rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.section2 .bottom .place .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.section2 .bottom .place .discount {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgb(248, 248, 248);
+  padding: 0.3rem 0.5rem;
+  border-radius: 1rem;
+}
+.section2 .bottom .place .name {
+  margin: 0.8rem 0 0.4rem 0;
+  font-weight: 600;
+}
+.section2 .bottom .place .location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: gray;
+}
+.section2 .bottom .place .location i {
+  font-size: 0.9rem;
+  color: #15abc5;
+}/*# sourceMappingURL=style.css.map */
