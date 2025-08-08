@@ -39,7 +39,7 @@
 
 // console.log(Math.max(10, 58, 92, 75)); // 92
 // console.log(Math.min(10, 58, 92, 75)); // 10
-// console.log(Math.min(2, 0, -3, 5, -7)); // 10
+// console.log(Math.min(2, 0, -3, 5, -7)); // -7
 
 // console.log(Math.random()); // output: random number b/w 0 - 1
 
