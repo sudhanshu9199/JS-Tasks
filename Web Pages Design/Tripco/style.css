@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 html,
@@ -184,12 +187,11 @@ nav .right a:nth-child(2) {
   margin-top: 1.5rem;
   width: 100%;
   display: flex;
-  gap: 2rem;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .section2 .bottom2 .place {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 13rem;
   position: relative;
 }
 .section2 .bottom2 .place .image {
@@ -229,4 +231,328 @@ nav .right a:nth-child(2) {
 .section2 .bottom2 .place .location i {
   font-size: 0.9rem;
   color: #15abc5;
+}
+
+.section3 {
+  margin-top: 8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section3 .text3 {
+  text-align: center;
+  width: 100%;
+}
+.section3 .text3 p:nth-child(1) {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.section3 .text3 p:nth-child(2) {
+  font-size: 1.2rem;
+  color: grey;
+}
+.section3 .bottom3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem 0;
+  width: 95%;
+}
+.section3 .bottom3 .left3 {
+  width: 30%;
+}
+.section3 .bottom3 .left3 .num3 {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.1rem 0.8rem;
+  border-radius: 0.3rem;
+  margin: 1.5rem 0;
+  font-weight: 600;
+  color: white;
+}
+.section3 .bottom3 .left3 .n-1 {
+  background: #15b6d2;
+}
+.section3 .bottom3 .left3 .n-2 {
+  background: #879ADF;
+}
+.section3 .bottom3 .left3 .n-3 {
+  background: #51C378;
+}
+.section3 .bottom3 .left3 .sub3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.section3 .bottom3 .left3 .info3 {
+  color: gray;
+}
+.section3 .bottom3 .left3 .btn3 {
+  margin-top: 2rem;
+  background: #15b6d2;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 0.7rem;
+  color: white;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  filter: drop-shadow(3px 5px 3px rgba(83, 83, 83, 0.362));
+  transition: all 0.4s ease-in-out;
+}
+.section3 .bottom3 .left3 .btn3:hover {
+  background: #14a5bf;
+}
+.section3 .bottom3 .left3 .btn3:active {
+  scale: 0.95;
+}
+.section3 .bottom3 .right3 {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.section3 .bottom3 .right3 .image3 {
+  width: 25rem;
+  height: 35rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.section3 .bottom3 .right3 .image3 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.section3 .bottom3 .right3 .user-card {
+  position: absolute;
+  background: rgb(237, 239, 241);
+  padding: 0.5rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.8rem;
+}
+.section3 .bottom3 .right3 .user-card .dp {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.section3 .bottom3 .right3 .user-card .dp img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.section3 .bottom3 .right3 .user-card .rating {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.section3 .bottom3 .right3 .user-card .rating i {
+  color: goldenrod;
+  filter: drop-shadow(1.2px 1.5px 1px rgba(35, 35, 35, 0.745));
+}
+.section3 .bottom3 .right3 .card1 {
+  left: 2%;
+  top: 15%;
+}
+.section3 .bottom3 .right3 .card2 {
+  left: 2%;
+  bottom: 15%;
+}
+.section3 .bottom3 .right3 .card3 {
+  right: 8%;
+  bottom: 50%;
+}
+
+.section4 {
+  width: 100%;
+  margin: 7rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section4 .text4 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section4 .text4 .left4 h3 {
+  font-size: 5rem;
+}
+.section4 .text4 .left4 p {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+.section4 .text4 .right4 {
+  color: gray;
+}
+.section4 .selectDiv {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+.section4 .selectDiv .options {
+  display: flex;
+  gap: 2rem;
+}
+.section4 .selectDiv .options p {
+  background: rgb(236, 236, 236);
+  padding: 0.25rem 0.56rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.section4 .selectDiv .options p:nth-child(1),
+.section4 .selectDiv .options p:active {
+  background: #000;
+  color: white;
+}
+.section4 .selectDiv .filter {
+  display: flex;
+  gap: 0.8rem;
+  background: rgb(236, 236, 236);
+  padding: 0.25rem 0.56rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.section4 .placesDiv4 {
+  width: 96%;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  align-items: center;
+}
+.section4 .placesDiv4 .place4 {
+  position: relative;
+  width: 19rem;
+}
+.section4 .placesDiv4 .place4 .image4 {
+  width: 19rem;
+  height: 13rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.section4 .placesDiv4 .place4 .image4 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.section4 .placesDiv4 .place4 .rating4 {
+  position: absolute;
+  top: 5%;
+  right: 4%;
+  display: flex;
+  gap: 0.3rem;
+  background: #e3e3e3;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+}
+.section4 .placesDiv4 .place4 .rating4 i {
+  color: goldenrod;
+}
+.section4 .placesDiv4 .place4 .info4 {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.section4 .placesDiv4 .place4 .info4 .spotInfo4 {
+  width: 65%;
+}
+.section4 .placesDiv4 .place4 .info4 .spotInfo4 .name4 {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.section4 .placesDiv4 .place4 .info4 .spotInfo4 .location4 {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.section4 .placesDiv4 .place4 .info4 .spotInfo4 .location4 i {
+  font-size: 0.8rem;
+  color: #15abc5;
+}
+.section4 .placesDiv4 .place4 .info4 .spotInfo4 .location4 p {
+  font-size: 0.9rem;
+}
+.section4 .placesDiv4 .place4 .info4 .price4 span {
+  font-weight: 600;
+}
+.section4 .more4 {
+  border: 2px solid black;
+  padding: 0.9rem 1.6rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.section4 .more4:active {
+  scale: 0.9;
+}
+
+.section5 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section5 .text5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section5 .text5 h3 {
+  font-size: 3.8rem;
+}
+.section5 .text5 p {
+  font-size: 1.3rem;
+  color: gray;
+}
+.section5 .staps {
+  width: 60rem;
+  height: 21rem;
+  margin-top: 2rem;
+}
+.section5 .staps img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0% 39%;
+     object-position: 0% 39%;
+}
+.section5 .arrows {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+.section5 .arrows i {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.section5 .arrows .right-arrow {
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 0.3rem;
 }/*# sourceMappingURL=style.css.map */
