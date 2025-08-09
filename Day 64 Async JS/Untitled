@@ -1,0 +1,49 @@
+- // js single threaded -> js ek operation hi ek
+time par kar skti hai -> octa core -> core
+- // thread matlab -> aapke processors mein cores
+hote hai and har core mein kai saare threads hote hgai and har ek thread ek time par ek operation perform kr sakta hai
+
+jo bhi code likhoge js mein wo do prakaar ka code ho skta hai, 'synchronous' and 'asynchronous'
+
+```
+console.log("hey");
+setTimeout(function(){
+console.log("hey 2");
+})
+console.log("hey 3");
+```
+These are all asynchronous:
+1. promises
+2. callbacks
+3. setTimeout
+4. setInterval
+5. async await
+
+
+- // aapke code mein sabse pahle synchronous part chalta hai, synchronous code ko js chalati hai main thread pe, kyuki js single threaded hai, uska likha hua code chalna chaalu hota hai pahle and main thread occupy hojaata hai, aur main thread pe humesha sabse pahle poora synchronous code chalega, jab ye poora code finish hoga tab jaakar async code ke chalne ki baari aayegi
+// sync code main thread mei chalna chaalu ho jaata hai, and async code ko webAPI's behind the scenes operate karna chaalu kr deti hai, jab ye code complete hota hai tab ye code ka completion move hojaata hai callback queue mein.
+
+```
+Example:
+console.log('hey');
+setTimeout(function () {
+    console.log('hey 3');
+}, 0);
+Promise.resolve().then(function () {
+    console.log('hey 2');
+});
+console.log('hey 4');
+
+output:- hey -> hey 4 -> hey 2 -> hey 3  // here is used micro  macro task queue.
+```
+
+---
+
+// main thread jaha par sync code chalta hai sabse pahle
+// main stack jo bhi main stack par aayega wo hi chalega
+
+// webAPI -> browser ki taraf se kai saare features milte hai jo js mein nahi hote, wo features hum js mein use to karte hai par wo js ke features nahi hote wo humein browser se milte hai
+
+// callback queue
+// microtask queue
+// macrotask queue
