@@ -45,5 +45,57 @@ output:- hey -> hey 4 -> hey 2 -> hey 3  // here is used micro  macro task queue
 // webAPI -> browser ki taraf se kai saare features milte hai jo js mein nahi hote, wo features hum js mein use to karte hai par wo js ke features nahi hote wo humein browser se milte hai
 
 // callback queue
+
+
+// sync -> call stack -> main thread execution
+// async -> webAPI -> callback queue -> (call stack empty) -> call stack -> main thread
+
+```
+function getDetaile(username, cb) {
+        setTimeout(function () {
+            console.log('Sending thre request to instagram...');
+        }, 1000);
+        setTimeout(() => {
+            console.log('fetching data...');
+        }, 3000);
+        setTimeout(() => {
+            cb();
+        }, 6000);
+}
+
+getDetails('Sudhanshus', () => {
+    console.log('data saved in gallery');
+})
+
+```
+/*Understand callback function work*/
+```
+function stepOne(cb) {
+    console.log('step 1');
+    cb();
+}
+
+function stepTwo(cb) {
+    console.log('step 2');
+    cb();
+}
+
+function stepThree(cb) {
+    console.log('step 3');
+    cb();
+}
+
+stepOne(() => {
+    stepTwo(() => {
+        stepThree(() => {
+            console.log('All callback clearead');
+        })
+    })
+})  // also this is called callback healed or christman tree problem
+```
+
+// server ka code jab bhi server ke liye hoga ususally wo async nahi hoga par jab bhi request kahi aur jaayegi wo kab tak response laayegi ka koi bharos anahi hai
+
+
 // microtask queue
 // macrotask queue
