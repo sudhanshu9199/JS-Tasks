@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player with oops</title>
+    <!-- link remix icon -->
+     <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="app">
+        <div class="image">
+            <img src="/music player with OOPs/girl_image.png" alt="">
+        </div>
+        <div class="music-info">
+            <p class="music-name" id="title">Neon Echoes</p>
+            <p class="artist">Synthwave Soul</p>
+        </div>
+        <div class="controls">
+            <i class="ri-shuffle-line shuffle"></i>
+            <i class="ri-skip-left-fill prev"></i>
+            <div id="play"></div>
+            <i class="ri-skip-right-fill next"></i>
+            <i class="ri-repeat-one-line repeat"></i>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar"></div>
+            <div class="progress-knob"></div>
+        </div>
+        <div class="timer">
+                <p class="current">0:45</p>
+                <p class="duration">3:20</p>
+        </div>
+
+        <div class="uploader">
+            <p>Music File Add Section</p>
+            <label for="fileInput" class="file-label">
+                <span class="choose-btn">Choose File</span>
+                <input type="file" name="" id="fileInput" accept="audio/*" multiple>
+                <button id="addBtn">+</button>
+            </label>
+        </div>
+        <div class="volumes">
+            <input type="range" name="" id="volume" min="0" max="100" step="1" value="10" style="flex:1">
+            <i class="ri-volume-up-fill"></i>
+        </div>
+
+        <div class="playlist"></div>
+
+        <audio id="audio"></audio>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
