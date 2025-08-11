@@ -1,3 +1,4 @@
+/*Day 64*/
 - // js single threaded -> js ek operation hi ek
 time par kar skti hai -> octa core -> core
 - // thread matlab -> aapke processors mein cores
@@ -38,7 +39,7 @@ output:- hey -> hey 4 -> hey 2 -> hey 3  // here is used micro  macro task queue
 ```
 
 ---
-
+/*Day 65*/
 // main thread jaha par sync code chalta hai sabse pahle
 // main stack jo bhi main stack par aayega wo hi chalega
 
@@ -96,6 +97,28 @@ stepOne(() => {
 
 // server ka code jab bhi server ke liye hoga ususally wo async nahi hoga par jab bhi request kahi aur jaayegi wo kab tak response laayegi ka koi bharos anahi hai
 
+// Using promise
+function stepOne() {
+    return new Promise(function (res, rej) {
+        console.log('step 1');
+        res();
+    });
+}
+function stepTwo() {
+    return new Promise(function (res, rej) {
+        console.log('step 2');
+        res();
+    });
+}
+function stepThree() {
+    return new promise((res, rej) => {
+        console.log('step 3');
+        res();
+    });
+}
+stepOne().then(stepTwo).then(stepThree).then(() => {
+    console.log('done all steps');
+});  // it is called flat promise chaining
 
 // microtask queue
 // macrotask queue
