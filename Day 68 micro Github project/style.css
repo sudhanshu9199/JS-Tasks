@@ -12,13 +12,17 @@ body {
   color: #c9d1d9;
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding: 2rem 2rem 0.5rem 2rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow: hidden;
 }
 
 .container {
   width: 100%;
   max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
@@ -190,15 +194,68 @@ header form button:active {
   background: rgb(77.8196721311, 141.0983606557, 239.1803278689);
 }
 
+footer {
+  text-align: center;
+}
+
 .hidden {
   display: none;
 }
 
-@media (max-width: 500px) {
-  form {
-    flex-direction: column;
+@media (max-width: 760px) {
+  html,
+  body {
+    padding: 1rem;
+    overflow-y: auto;
   }
-  form button {
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  .container header h1 {
+    font-size: 1.5rem;
+  }
+  .container header form {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .container header form button {
     width: 100%;
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
+  .container header form input {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.9rem 1.2rem;
+  }
+  .container .user-card {
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+  .container .avatar {
+    width: 90px;
+    height: 90px;
+  }
+  .container .info .name {
+    font-size: 1.2rem;
+  }
+  .container .info .bio {
+    font-size: 0.9rem;
+  }
+  .container .info ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .container .info ul li {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  .container .info .profile-link {
+    width: 100%;
+    display: inline-block;
+    padding: 0.6rem;
+    font-size: 0.95rem;
   }
 }/*# sourceMappingURL=style.css.map */

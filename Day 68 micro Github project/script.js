@@ -34,8 +34,7 @@ function devorateProfileData(details) {
                     }</span></li>
                      <li>📍 ${details.location || "Location not available"}</li>
             <li>🏢 ${details.company || "Company not available"}</li>
-            <li>🔗 <a href="${details.blog || "#"}" target="_blank">${
-    details.blog || "No blog available"
+            <li>🔗 <a href="${details.blog || "#"}" target="_blank">${ details.blog ? 'Checkout Blog' : "No blog available"
   }</a></li>
                 </ul>
                 <a href="https://github.com/${
@@ -48,7 +47,6 @@ function devorateProfileData(details) {
 let inputBox = document.getElementById("username");
 let card = document.querySelector(".user-card");
 let skeleton = document.querySelector(".skeleton");
-console.log(card);
 
 document.getElementById("submitBtn").addEventListener("click", (e) => {
   e.preventDefault();
