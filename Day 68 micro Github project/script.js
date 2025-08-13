@@ -1,37 +1,77 @@
-async function getUserData(username) {
-    const raw = await fetch(`https://api.github.com/users/${username}`);
-    return await raw.json();
+function getProfileData(username) {
+  return fetch(`https://api.github.com/users/${username}`).then((raw) => {
+    if (!raw.ok) throw new Error("User not found.");
+    return raw.json();
+  });
 }
 
-let submitBtn = document.getElementById('submitBtn');
-let inputBox = document.getElementById('inputBox');
-let dataDisplay = document.querySelector('.data-display');
+function getUserRepos(username) {
+  return fetch(
+    `https://api.github.com/users/${username}/repos?sort=updated`
+  ).then((raw) => {
+    if (!raw.ok) throw new Error("Failed to fetch repos...");
+    return raw.json();
+  });
+}
 
-submitBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    let input = inputBox.value.trim();
-    console.log(input);
-    // getUserData(input).then((data) => {
-        
-    //     if (data.message === "Not Found") {
-    //             dataDisplay.innerHTML = `<p>User not found 🚫</p>`;
-    //             return;
-    //         }
+function devorateProfileData(details) {
+  console.log(details);
 
-    //     dataDisplay.innerHTML = `<img src="${data.avatar_url}" alt="${data.login}" width="100">
-    //             <h2>${data.name || data.login}</h2>
-    //             <p>Followers: ${data.followers}</p>
-    //             <p>Following: ${data.following}</p>
-    //             <p>Public Repos: ${data.public_repos}</p>`
-    // })
-    // .catch(err => {
-    //     dataDisplay.innerHTML = `<p>Error: ${err.message}</p>`;
-    // })
+  let data = `
+    <img src="${details.avatar_url}" alt="User Avatar" class="avatar">
+            <div class="info">
+                <h2 class="name">${details.name ? details.name : ""}</h2>
+                <p class="bio">${details.bio || "No bio available"}</p>
+                <ul>
+                    <li>📦 <span class="repos">${
+                      details.public_repos ?? 0
+                    }</span> Repos</li>
+                    <li>👥 <span class="followers">${
+                      details.followers ?? 0
+                    }</span> Followers</li>
+                    <li>🧑‍ Following <span>${
+                      details.following ?? 0
+                    }</span></li>
+                     <li>📍 ${details.location || "Location not available"}</li>
+            <li>🏢 ${details.company || "Company not available"}</li>
+            <li>🔗 <a href="${details.blog || "#"}" target="_blank">${
+    details.blog || "No blog available"
+  }</a></li>
+                </ul>
+                <a href="https://github.com/${
+                  details.login
+                }" target="_blank" class="profile-link">View Profile</a>
+            </div>`;
 
-    getUserData(input).then(data => {
-        console.log('data:',data);
-        
-        dataDisplay.innerHTML = `Follows: ${data.following}\n Name: ${data.name}`;
-    })
-    inputBox.value = '';
-})
+  card.innerHTML = data;
+}
+let inputBox = document.getElementById("username");
+let card = document.querySelector(".user-card");
+let skeleton = document.querySelector(".skeleton");
+console.log(card);
+
+document.getElementById("submitBtn").addEventListener("click", (e) => {
+  e.preventDefault();
+  let input = inputBox.value.trim();
+  if (!input) {
+    return;
+  }
+  card.classList.add('hidden');
+  skeleton.classList.remove('hidden');
+
+  getProfileData(input).then((data) => {
+    console.log(data);
+    setTimeout(() => {
+        devorateProfileData(data);
+        skeleton.classList.add('hidden');
+    }, 1200)
+    card.classList.remove('hidden');
+  })
+  .catch(err => {
+    skeleton.classList.add('hidden');
+    card.classList.remove('hidden');
+    card.innerHTML = `<p style="color: red;">${err.message}</p>`;
+  })
+
+  inputBox.value = "";
+});

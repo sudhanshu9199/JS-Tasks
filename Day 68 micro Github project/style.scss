@@ -1,24 +1,210 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+$primary: #1f6feb;
+$bg: #0d1117;
+$text-light: #c9d1d9;
+$card-bg: #161b22;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html, body {
-    width: 100%;
-    height: 100%;
-    background: #2c2c2c;
-    color: white;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: $bg;
+  color: $text-light;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-input[type='text'] {
+
+.container {
+  width: 100%;
+  max-width: 700px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    margin-bottom: 1rem;
     font-size: 2rem;
-    width: 20rem;
-    padding: 0.5rem 1rem;
+  }
+
+  form {
+    display: flex;
+    gap: 0.5rem;
+
+    input {
+      flex: 1;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      background: $card-bg;
+      color: $text-light;
+      font-size: 1.2rem;
+    }
+
+    button {
+      padding: 0.7rem 1.5rem;
+      background: $primary;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+      position: relative;
+      z-index: 1;
+
+      &:hover {
+        background: lighten($primary, 10%);
+      }
+      &:active {
+        animation: button-bounce 0.3s ease;
+      }
+    }
+  }
 }
-input[type='submit'] {
-    font-size: 2rem;
-    padding: 0.2rem 2rem;
-    cursor: pointer;
+
+
+@keyframes button-bounce {
+  0% { transform: scale(1) translateY(0); z-index: 1; }
+  30% { transform: scale(0.9) translateY(2px); z-index: 2; }
+  60% { transform: scale(1.05) translateY(-2px); z-index: 0; }
+  100% { transform: scale(1) translateY(0); z-index: 1; }
 }
-input[type='submit']:active{
-    scale: 0.9;
+
+/* Skeleton loader */
+.skeleton {
+  background: $card-bg;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  animation: fadeIn 0.5s ease;
+
+  .avatar-skeleton {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #2a2f3a 25%, #3a3f4a 50%, #2a2f3a 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  .text-skeleton {
+    width: 80%;
+    height: 16px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #2a2f3a 25%, #3a3f4a 50%, #2a2f3a 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+
+    &.short { width: 50%; }
+  }
+
+  .list-skeleton {
+    display: flex;
+    gap: 1rem;
+
+    div {
+      width: 60px;
+      height: 16px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #2a2f3a 25%, #3a3f4a 50%, #2a2f3a 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+    }
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.user-card {
+  background: $card-bg;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.05);
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid $primary;
+  }
+
+  .info {
+    .name {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .bio {
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+
+      li {
+        font-size: 0.9rem;
+      }
+    }
+
+    .profile-link {
+      background: $primary;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: lighten($primary, 10%);
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  form {
+    flex-direction: column;
+
+    button {
+      width: 100%;
+    }
+  }
 }

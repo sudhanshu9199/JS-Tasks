@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GitHub User Finder</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="">
-        <input type="text" name="" id="inputBox" placeholder="username" required>
-        <input type="submit" value="Get data" id="submitBtn">
-    </form>
-    <div class="data-display"></div>
+    <div class="container">
+        <header>
+            <h1>GitHub User Finder</h1>
+            <form action="" id="searchForm">
+                <input type="text" name="" id="username" required placeholder="Enter GitHub username...">
+                <button type="Submit" id="submitBtn">Search</button>
+            </form>
+        </header>
+
+        <div class="skeleton hidden">
+            <div class="avatar-skeleton"></div>
+            <div class="text-skeleton short"></div>
+            <div class="text-skeleton"></div>
+            <div class="list-skeleton">
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+            </div>
+        </div>
+
+        <div class="user-card hidden"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
