@@ -1,0 +1,57 @@
+:root{
+  /* Core */
+  --bg: #ffffff;
+  --text: #00224D;        /* main body text on light bg */
+  --muted: #5D0E41;       /* secondary headings / subtle text */
+  --accent: #FF204E;      /* primary accent / CTA background */
+  --accent-dark: #A0153E; /* deeper accent, secondary CTA */
+  --inverse-text: #ffffff;/* for dark backgrounds */
+
+  /* button text choices */
+  --accent-cta-text: #000000; /* black on pink (accessible) */
+  --accent-dark-text: #ffffff;/* white on deep maroon */
+}
+
+@font-face {
+    font-family: aeonik;
+    font-weight: bold;
+    src: url(./font/fonnts.com-Aeonik-Bold.ttf);
+}
+@font-face {
+    font-family: aeonik;
+    font-weight: medium;
+    src: url(./font/fonnts.com-Aeonik-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: aeonik;
+}
+#main {
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+
+    nav {
+        background: var(--text);
+        color: var(--inverse-text);
+        width: 100%;
+        height: 4rem;
+        position: fixed;
+    }
+    section.allElems {
+        height: 100%;
+        width: 100%;
+        padding: 40px;
+        padding-top: 80px;
+        background: linear-gradient(135deg, #00224D 0%, #5D0E41 50%, #A0153E 100%);
+        color: var(--inverse-text);
+    }
+}
