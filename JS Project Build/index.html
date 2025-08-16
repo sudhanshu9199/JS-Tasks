@@ -1,20 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <!-- remix -->
+     <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div id="main">
-        <nav></nav>
-        <section class="allElems">
-            <div class="todo elem" id="1">
-                <img src="" alt="">
+      <!-- <nav></nav> -->
+      <section class="allElems">
+        <div class="todo elem" id="0">
+          <img src="/image/todo-list-card1.png" alt="" />
+          <h2>TODO List</h2>
+        </div>
+        <div class="daily elem" id="1">
+          <img src="/image/daily-planner-tile.png" alt="" />
+          <h2>Daily Planner</h2>
+        </div>
+        <div class="motivation elem" id="2">
+          <img src="/image/motivation-tile.png" alt="" />
+          <h2>Motivation</h2>
+        </div>
+        <div class="Pomodoro elem" id="3">
+          <img src="/image/pomodoro-timer-tile1.png" alt="" />
+          <h2>Pomodoro Timer</h2>
+        </div>
+        <div class="goal elem" id="4">
+          <img src="/image/daily-goal-tile.png" alt="" />
+          <h2>Daily Goal</h2>
+        </div>
+      </section>
+
+      <div class="fullElem todo-list-Page">
+        <button class="back" id="0"><i class="ri-close-large-line"></i></button>
+        <h2>Personalised Task List</h2>
+        <div class="todo-container">
+            <div class="addTask">
+                <form action="" id="form">
+                    <input type="text" name="" id="inputBox" placeholder="Enter Task" required>
+                    <textarea name="" id="detailInput" cols="30" rows="10" placeholder="Enter Details"></textarea>
+                    <div class="mark-imp">
+                        <input type="checkbox" name="" id="check">
+                        <label for="check">Mark as Important</label>
+                    </div>
+                    <button type="submit">Add Task</button>
+                </form>
             </div>
-        </section>
+            <div class="allTask"></div>
+        </div>
+      </div>
+      <div class="fullElem daily-planner-page">
+        <button class="back" id="1"><i class="ri-close-large-line"></i></button>
+        <h2>Plan your Day to be more Productive</h2>
+
+        <div class="day-planner">
+            <div class="day-planner-time">
+                <p>6:00</p>
+                <input type="text" name="" id="input" placeholder="...">
+            </div>
+        </div>
+      </div>
+      <div class="fullElem motivation-page">
+        <button class="back" id="2"><i class="ri-close-large-line"></i></button>
+        <h1>Motivation gen.</h1>
+      </div>
+      <div class="fullElem pomodoro-page">
+        <button class="back" id="3"><i class="ri-close-large-line"></i></button>
+        <h1>Pomodoro timer</h1>
+      </div>
+      <div class="fullElem goal-page">
+        <button class="back" id="4"><i class="ri-close-large-line"></i></button>
+        <h1>Daily Goal</h1>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

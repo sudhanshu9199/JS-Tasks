@@ -1,57 +1,261 @@
-:root{
+:root {
   /* Core */
   --bg: #ffffff;
-  --text: #00224D;        /* main body text on light bg */
-  --muted: #5D0E41;       /* secondary headings / subtle text */
-  --accent: #FF204E;      /* primary accent / CTA background */
-  --accent-dark: #A0153E; /* deeper accent, secondary CTA */
-  --inverse-text: #ffffff;/* for dark backgrounds */
+  --text: #00224d; /* main body text on light bg */
+  --muted: #5d0e41; /* secondary headings / subtle text */
+  --accent: #ff204e; /* primary accent / CTA background */
+  --accent-dark: #a0153e; /* deeper accent, secondary CTA */
+  --inverse-text: #ffffff; /* for dark backgrounds */
 
   /* button text choices */
   --accent-cta-text: #000000; /* black on pink (accessible) */
-  --accent-dark-text: #ffffff;/* white on deep maroon */
+  --accent-dark-text: #ffffff; /* white on deep maroon */
 }
 
 @font-face {
-    font-family: aeonik;
-    font-weight: bold;
-    src: url(./font/fonnts.com-Aeonik-Bold.ttf);
+  font-family: aeonik;
+  font-weight: bold;
+  src: url(./font/fonnts.com-Aeonik-Bold.ttf);
 }
 @font-face {
-    font-family: aeonik;
-    font-weight: medium;
-    src: url(./font/fonnts.com-Aeonik-Regular.ttf);
+  font-family: aeonik;
+  font-weight: medium;
+  src: url(./font/fonnts.com-Aeonik-Regular.ttf);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
-    font-family: aeonik;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: aeonik;
 }
 #main {
-    width: 100%;
-    height: 100%;
-    background: var(--bg);
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
 
-    nav {
-        background: var(--text);
-        color: var(--inverse-text);
+  //   nav {
+  //     background: var(--text);
+  //     color: var(--inverse-text);
+  //     width: 100%;
+  //     height: 4rem;
+  //     position: fixed;
+  //   }
+  section.allElems {
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    padding-top: 80px;
+    background: linear-gradient(135deg, #00224d 0%, #5d0e41 50%, #a0153e 100%);
+    color: var(--inverse-text);
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+
+    .elem {
+      width: 15rem;
+      height: 18rem;
+      overflow: hidden;
+      position: relative;
+      border-radius: 1rem;
+      filter: drop-shadow(1px 2px 8px rgb(111, 111, 111));
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      img {
         width: 100%;
-        height: 4rem;
-        position: fixed;
-    }
-    section.allElems {
         height: 100%;
-        width: 100%;
-        padding: 40px;
-        padding-top: 80px;
-        background: linear-gradient(135deg, #00224D 0%, #5D0E41 50%, #A0153E 100%);
+        object-fit: cover;
+        object-position: center;
+      }
+      h2 {
+        position: absolute;
+        bottom: 2%;
+        right: 5%;
         color: var(--inverse-text);
+      }
+      &:active {
+        scale: 0.95;
+      }
     }
+  }
+
+  .fullElem {
+    height: 100%;
+    width: 100%;
+    background: var(--accent);
+    padding: 40px;
+    font-size: 60px;
+    display: none;
+    position: absolute;
+  }
+
+  .todo-list-Page {
+    font-size: 2.7rem;
+    background: #4042C8;
+
+    h2 {
+      color: #FFFFFF
+    }
+
+    .todo-container {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+
+      .addTask {
+        width: 33%;
+        background: #3232A9;
+        display: flex;
+        align-items: flex-start;
+        padding: 1rem;
+        justify-content: center;
+        border-radius: 1.5rem;
+
+        form {
+          display: flex;
+          flex-direction: column;
+
+          input, textarea, button {
+            padding: 1rem;
+            font-size: 1.2rem;
+            border-radius: 0.5rem;
+            outline: none;
+            background: #F0F4F7;
+            color: #3633A7;
+            border: none;
+          }
+          input {
+            font-weight: 600;
+            margin-bottom: 1rem;
+          }
+          button {
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            margin-top: 1.5rem;
+            background: #F0F4F7;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:active {
+              scale: 0.95;
+            }
+          }
+
+          .mark-imp {
+            margin: 0 0.8rem;
+            label {
+              font-size: 1.2rem;
+              color: #ababab;
+            }
+            #check {
+              scale: 2;
+              outline: none;
+            }
+          }
+        }
+      }
+      .allTask {
+        width: 65%;
+        background: #3232A9;
+        border-radius: 1.5rem;
+        padding: 1rem;
+        overflow: auto;
+        height: 35rem;
+
+        .task {
+          display: flex;
+          background: #9d9d9d;
+          color: rgb(36, 35, 35);
+          border-radius: 0.5rem;
+          padding: 0.1rem 0.8rem;
+          align-items: center;
+          justify-content: space-between;
+          height: 3.9rem;
+          margin-bottom: 1rem;
+          position: relative;
+
+          h5 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            display: flex;
+            align-items: flex-start;
+
+            span {
+              position: absolute;
+              top: -9%;
+              left: -1%;
+              font-size: 0.8rem;
+              text-transform: capitalize;
+              background: #806CFA;
+              color: rgb(201, 255, 119);
+              padding: 0.2rem 0.5rem;
+              border-radius: 1rem;
+            }
+              span.true {
+                opacity: 1;
+              }
+              span.false {
+                opacity: 0;
+              }
+          }
+
+          button {
+            padding: 0.5rem 0.8rem;
+            font-size: 1.4rem;
+            border: none;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            background:rgb(3, 161, 24);
+            color: aliceblue;
+            font-weight: 600;
+            transition: all 0.1s ease-in;
+
+            &:active {
+              scale: 0.92;
+            }
+          }
+          
+        }
+      }
+    }
+  }
+
+  .back {
+    position: absolute;
+    right: 5%;
+    background-color: rgb(255, 0, 93);
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    color: var(--inverse-text);
+    box-shadow: 0 0px 5px 1px rgba(83, 83, 83, 0.685);
+
+    &:active {
+      scale: 0.92;
+    }
+  }
+
+  .daily-planner-page {
+    display: block;
+    background: #FAF4E4;
+    
+    h2 {
+      font-size: 3.7rem;
+      color: #816756;
+    }
+  }
 }
