@@ -63,7 +63,7 @@ body {
   border-radius: 1rem;
   filter: drop-shadow(1px 2px 8px rgb(111, 111, 111));
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 #main section.allElems .elem img {
   width: 100%;
@@ -93,10 +93,10 @@ body {
 }
 #main .todo-list-Page {
   font-size: 2.7rem;
-  background: #4042C8;
+  background: #4042c8;
 }
 #main .todo-list-Page h2 {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 #main .todo-list-Page .todo-container {
   margin-top: 2rem;
@@ -105,7 +105,7 @@ body {
 }
 #main .todo-list-Page .todo-container .addTask {
   width: 33%;
-  background: #3232A9;
+  background: #3232a9;
   display: flex;
   align-items: flex-start;
   padding: 1rem;
@@ -116,13 +116,15 @@ body {
   display: flex;
   flex-direction: column;
 }
-#main .todo-list-Page .todo-container .addTask form input, #main .todo-list-Page .todo-container .addTask form textarea, #main .todo-list-Page .todo-container .addTask form button {
+#main .todo-list-Page .todo-container .addTask form input,
+#main .todo-list-Page .todo-container .addTask form textarea,
+#main .todo-list-Page .todo-container .addTask form button {
   padding: 1rem;
   font-size: 1.2rem;
   border-radius: 0.5rem;
   outline: none;
-  background: #F0F4F7;
-  color: #3633A7;
+  background: #f0f4f7;
+  color: #3633a7;
   border: none;
 }
 #main .todo-list-Page .todo-container .addTask form input {
@@ -133,7 +135,7 @@ body {
   font-size: 1.5rem;
   transition: all 0.3s ease;
   margin-top: 1.5rem;
-  background: #F0F4F7;
+  background: #f0f4f7;
   font-weight: 600;
   cursor: pointer;
 }
@@ -153,7 +155,7 @@ body {
 }
 #main .todo-list-Page .todo-container .allTask {
   width: 65%;
-  background: #3232A9;
+  background: #3232a9;
   border-radius: 1.5rem;
   padding: 1rem;
   overflow: auto;
@@ -161,7 +163,7 @@ body {
 }
 #main .todo-list-Page .todo-container .allTask .task {
   display: flex;
-  background: #9d9d9d;
+  background: #b9b9b9;
   color: rgb(36, 35, 35);
   border-radius: 0.5rem;
   padding: 0.1rem 0.8rem;
@@ -183,7 +185,7 @@ body {
   left: -1%;
   font-size: 0.8rem;
   text-transform: capitalize;
-  background: #806CFA;
+  background: #806cfa;
   color: rgb(201, 255, 119);
   padding: 0.2rem 0.5rem;
   border-radius: 1rem;
@@ -226,10 +228,54 @@ body {
   scale: 0.92;
 }
 #main .daily-planner-page {
-  display: block;
-  background: #FAF4E4;
+  background: #faf4e4;
 }
 #main .daily-planner-page h2 {
   font-size: 3.7rem;
   color: #816756;
+}
+#main .daily-planner-page .day-planner {
+  background: #eedec7;
+  height: 87%;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: auto;
+}
+#main .daily-planner-page .day-planner .day-planner-time {
+  color: rgb(250, 238, 227);
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  width: 49%;
+}
+#main .daily-planner-page .day-planner .day-planner-time p {
+  position: absolute;
+  top: 5%;
+  left: 1%;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+#main .daily-planner-page .day-planner .day-planner-time input {
+  padding: 0.5rem 2rem;
+  outline: none;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  background: #8c533f;
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+#main .motivation-page {
+  display: block;
+}
+#main .motivation-page h2 {
+  font-size: 5rem;
 }/*# sourceMappingURL=style.css.map */
