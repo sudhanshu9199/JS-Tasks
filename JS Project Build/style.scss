@@ -300,13 +300,124 @@ body {
   }
 
   .motivation-page {
-    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(189deg,rgba(253, 229, 213, 1) 28%, rgba(248, 203, 179, 1) 56%);
 
     h2 {
-      font-size: 5rem;
+      font-size: 4rem;
+    }
+
+    .motivation-container {
+      background: #2f2f2f19;
+      height: 60%;
+      width: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5rem;
+      border: 2rem solid transparent;
+
+      &::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: linear-gradient(189deg,rgba(20, 32, 94, 1) 28%, rgba(4, 16, 69, 1) 56%);
+        border-radius: 50px;
+        z-index: 8;
+      }
+
+      .motivation-wrapper {
+        z-index: 10;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 40px;
+        // overflow: hidden;
+
+        .motivation-1 {
+          background: #ffffff1c;
+          padding: 1rem;
+          h3 {
+            margin-left: 1rem;
+            font-weight: 500;
+            font-size: 2rem;
+            color: aliceblue;
+          }
+        }
+
+        .motivation-2 {
+          padding: 1rem;          
+          h1 {
+            padding: 1.2rem 0.5rem;
+            font-family: "Inter", sans-serif;
+          font-size: 1.6rem;
+          color: whitesmoke;
+          font-weight: 500;
+          font-style: italic;
+          line-height: 1.5;
+          }
+        }
+        .motivation-3 {
+          padding: 1rem;
+          
+          h2 {
+            padding: 5rem 0.5rem 0 0.5rem;
+            font-family: "Edu QLD Hand", cursive;
+          font-size: 1.5rem;
+          color: #6D9FB8;
+          font-weight: 500;
+          font-style: italic;
+          line-height: 1.5;
+          position: absolute;
+          bottom: 5%;
+          left: 5%;
+
+          &::after {
+            position: absolute;
+            bottom: 1%;
+            left: 4%;
+            content: '';
+            width: 100%;
+            height: 0.2rem;
+            background: rgb(212, 212, 212);
+          }
+          }
+
+          .quote-icon {
+            position: absolute;
+            bottom: 15%;
+            right: 10%;
+            font-size: 5rem;
+            color: #FAC9A8;
+          }
+        }
+
+      }
     }
   }
 
-  //  font-family: "Edu QLD Hand", cursive;
-  // font-family: "Inter", sans-serif;
+  .pomodoro-page {
+    display: block;
+    position: relative;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    .pomo-timer {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      h1 {
+        font-size: 8.2rem;
+      }
+    }
+  }
 }

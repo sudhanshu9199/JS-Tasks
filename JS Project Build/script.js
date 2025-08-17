@@ -71,7 +71,7 @@ todoList();
 
 function dailyPlanner() {
   let stored = JSON.parse(localStorage.getItem("dayPlannerData")) || {};
-  let lastSaved = localStorage.getItem("dayPlannerTimestamp");
+  let lastSaved = Number(localStorage.getItem("dayPlannerTimestamp"));
 
   if (lastSaved && Date.now() - lastSaved > 24 * 60 * 60 * 1000) {
     stored = {};
@@ -122,3 +122,22 @@ function dailyPlanner() {
 }
 
 dailyPlanner();
+
+
+
+function motivationGenerator () {
+    let motivationQuote = document.querySelector('.motivation-2 h1');
+let motivationAuthor = document.querySelector('.motivation-3 h2');
+async function fetchQuote() {
+let response = await fetch('https://dummyjson.com/quotes/random');
+let data = await response.json();
+
+console.log(data.quote);
+motivationQuote.innerHTML = data.quote;
+motivationAuthor.innerHTML = data.author;
+
+}
+fetchQuote();
+}
+
+motivationGenerator();
