@@ -1,6 +1,5 @@
 :root {
   /* Core */
-  --bg: #ffffff;
   --text: #00224d; /* main body text on light bg */
   --muted: #5d0e41; /* secondary headings / subtle text */
   --accent: #ff204e; /* primary accent / CTA background */
@@ -35,31 +34,77 @@ body {
   width: 100%;
   height: 100%;
   font-family: aeonik;
+  background: linear-gradient(135deg, #00224d 0%, #5d0e41 50%, #a0153e 100%);
 }
 #main {
   width: 100%;
   height: 100%;
-  background: var(--bg);
 
-  //   nav {
-  //     background: var(--text);
-  //     color: var(--inverse-text);
-  //     width: 100%;
-  //     height: 4rem;
-  //     position: fixed;
-  //   }
   section.allElems {
     height: 100%;
     width: 100%;
-    padding: 40px;
-    padding-top: 80px;
-    background: linear-gradient(135deg, #00224d 0%, #5d0e41 50%, #a0153e 100%);
+    padding: 1.5rem 2rem;
     color: var(--inverse-text);
-    display: flex;
+    position: absolute;
+
+    header {
+      height: 15rem;
+      width: 100%;
+      background: url(https://images.unsplash.com/photo-1460411794035-42aac080490a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+      background-size: cover;
+      background-position: top;
+      border-radius: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+      margin-bottom: 2rem;
+
+      .header1 {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        h2 {
+          font-size: 1.8rem;
+          font-family: "Inter", sans-serif;
+          font-weight: 500;
+        }
+        h1 {
+          font-size: 3.5rem;
+          margin: 0.5rem 0 1.5rem;
+
+          span {
+            // border: 2px solid red;
+            // width: 20rem;
+            padding: 0.5rem 0.5rem 0 0.5rem;
+          }
+        }
+        h4 {
+          font-family: "Inter", sans-serif;
+          font-size: 2.2rem;
+          font-weight: 400;
+
+          span{
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .header2 {
+        color: #7a6292;
+        h2 {
+          font-size: 2.5rem;
+          margin-bottom: -1rem;
+        }
+      }
+    }
+
+    .allFeatures {
+          display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-between;
-    position: absolute;
+    }
 
     .elem {
       width: 15rem;
@@ -401,7 +446,6 @@ body {
   }
 
   .pomodoro-page {
-    display: block;
     position: relative;
 
     h1 {
@@ -410,13 +454,41 @@ body {
 
     .pomo-timer {
       position: absolute;
-      top: 40%;
+      top: 45%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
 
       h1 {
         font-size: 8.2rem;
+        width: 29rem;
+      }
+
+      button {
+        outline: none;
+        font-size: 1.5rem;
+        padding: 0.3rem 0.9rem;
+        border-radius: 1.5rem;
+        // border: 2px solid rgb(0, 171, 251);
+        border: 2px solid white;
+        background: #ffffff31;
+        cursor: pointer;
+        color: white;
+        transition: all 0.1s ease;
+
+        &:active {
+          scale: 0.9;
+        }
+      }
+      .session {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        background: #000;
+        color: whitesmoke;
+        padding: 1.5rem 0;
+        border-radius: 1rem;
+        filter: drop-shadow(0px 0px 12px black);
       }
     }
   }
