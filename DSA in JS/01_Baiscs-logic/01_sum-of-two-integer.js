@@ -69,3 +69,15 @@ let j = --(i++);
 // let r = 12;
 // console.log(Math.PI) // 3.14
 // console.log(Number((2 * Math.PI * r).toFixed(2)));
+
+
+let a = 10, b = 12;
+let c, d;
+c = a++;
+d = ++b;
+
+console.log(a); // 11
+console.log(c); // 10
+
+console.log(b); // 13
+console.log(d); // 13
