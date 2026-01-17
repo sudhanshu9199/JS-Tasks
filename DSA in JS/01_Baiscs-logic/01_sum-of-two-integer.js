@@ -71,13 +71,42 @@ let j = --(i++);
 // console.log(Number((2 * Math.PI * r).toFixed(2)));
 
 
-let a = 10, b = 12;
-let c, d;
-c = a++;
-d = ++b;
+// let a = 10, b = 12;
+// let c, d;
+// c = a++;
+// d = ++b;
 
-console.log(a); // 11
-console.log(c); // 10
+// console.log(a); // 11
+// console.log(c); // 10
 
-console.log(b); // 13
-console.log(d); // 13
+// console.log(b); // 13
+// console.log(d); // 13
+
+
+
+// // A = (p * ( 1 + r/100) ^ t)
+// // CI = A - P;
+// let p = Number(prompt('Enter principle:'));
+// let r = Number(prompt('Enter rate:'));
+// let t = Number(prompt('Enter a time'));
+
+// let amount = p * Math.pow((1 + r/100), t);
+// console.log(amount);
+// let ci = amount - p;
+// console.log(ci);
+
+
+// console.log(Math.random() * 9000 + 1000);
+
+// console.log(Math.sqrt(16));
+
+let name = prompt('Enter name:')
+let age = Number(prompt('Enter age:'))
+if (age > 18) {
+    console.log(`${name} is valid voter!`);
+}
+else {
+    console.log(`${name} is not valid voter.`);
+    
+}
+

@@ -124,3 +124,6 @@ console.log(Math.cbrt(4));
 let a = 85.05756
 console.log(a.toFixed(3))
 console.log(typeof a.toFixed(2))
+
+
+
