@@ -160,10 +160,18 @@
 // }
 // console.log(`${n} is factor of ${n}`);
 
-
-let n = Number(prompt('Enter n value:'));
-for (let i = 1; i <= n/2; i++) {
-    if (n % i !==0) {
-        console.log(`${n} is prime number.`);
+let n = Number(prompt("Enter n value:"));
+let prime = false;
+if (n === 2) {
+  prime = true;
+} else {
+  for (let i = 2; i < n / 2; i++) {
+    if (n % i === 0) {
+      prime = false;
+      break;
+    } else {
+      prime = true;
     }
+  }
 }
+console.log(`${n} ${prime ? "is a prime number" : "is not a prime number."}`);

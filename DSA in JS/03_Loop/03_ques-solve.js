@@ -356,3 +356,72 @@ Aur false ka matlab: “Na bhai, iske toh chhupke divisors mil gaye, ye prime na
 //     }
 // }
 // console.log("Thank you for using the Sasta Calculator! 😊");
+
+
+
+// Revise
+
+// let n = 10;
+// for (let i = 1; i <= n; i++) {
+//     if (i === 7) continue;
+//     console.log(i);
+    
+// }
+
+
+// let n = 10;
+// while( n >= 0) {
+//     console.log(n);
+//     n--;
+// }
+
+// let n = 5;
+// let sum = 0;
+// while(n > 0) {
+//     sum += n;
+//     n--;
+// }
+// console.log(sum);
+
+
+// sum of digits 34567
+// let n = Number(prompt('Enter digits:'));
+// let sum = 0;
+
+// while(n > 0) {
+//     let rem = Math.floor(n / 10);
+//     let quo = n % 10;
+//     sum += quo;
+
+//     n = rem;
+// }
+// console.log(sum);
+
+
+// reverse of number
+// let n = Number(prompt("Enter digits:"));
+// let reverse = 0;
+// while (n > 0) {
+//     let rem = n % 10;
+//     reverse = (reverse * 10) + rem;
+//     let  quotent =Math.floor( n / 10);
+//     n = quotent;
+// }
+
+// console.log(reverse);
+
+
+// Automorphic number
+let n = Number(prompt('Enter digit:')); // 1234
+let sq = n * n;
+let copy = n;
+let count = 0;
+while(n > 0) {
+count++;
+let rem = Math.floor(n / 10);
+
+n = rem;
+}
+
+if (sq % Math.pow(10, count) === copy) console.log('Automorphic number.');
+else console.log(`${copy} is not Automorphic number.`);
