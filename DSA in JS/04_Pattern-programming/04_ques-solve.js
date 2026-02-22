@@ -206,3 +206,94 @@ A B C D E */
 //   }
 //   process.stdout.write('\n');
 // }
+
+
+
+// revise
+
+// const prompt = require('prompt-sync')();
+
+// let n = prompt('Enter number:')
+
+// for (let i = 1; i <= n; i++) {
+//   for (let j = 1; j <= i; j++) {
+//     process.stdout.write(String.fromCharCode(64 + j) + ' ');
+//   }
+//   process.stdout.write('\n');
+// }
+
+
+// mirror right angle traingle
+
+// const prompt = require('prompt-sync')();
+
+// let n = prompt('Enter number: ');
+// for (let i = 1; i <= n; i++) {
+//   for (let j = i; j < n; j++) {
+//     process.stdout.write('  ');
+//   }
+//   for (let k = 1; k <= i; k++){
+//     process.stdout.write('* ')
+//   }
+//   process.stdout.write('\n');
+// }
+
+
+// triangle pattern
+
+// const prompt = require('prompt-sync')();
+
+// let n = prompt('Enter number: ');
+// for (let i = 1; i <= n; i++) {
+//   for (let j = i; j < n; j++) {
+//     process.stdout.write(' ');
+//   }
+//   for (let k = 1; k <= i; k++){
+//     process.stdout.write('* ')
+//   }
+//   process.stdout.write('\n');
+// }
+
+// pattern X
+
+// const prompt = require('prompt-sync')();
+
+// let n = prompt('Enter number: ');
+// for (let i = 1; i <= n; i++) {
+//   for (let j = 1; j <= n; j++) {
+//     if (j === i || j === n - i + 1) {
+//       process.stdout.write('* ');
+//     }
+//     else {
+//       process.stdout.write(' ');
+//     }
+//   }
+//   process.stdout.write('\n');
+// }
+
+
+// Pattern V
+
+// let prompt = require('prompt-sync')();
+// let n = prompt('Enter number: ');
+// for (let i = 1; i <= n; i++) {
+//   for (let j = 1; j <= (n * 2) - i; j++) {
+//     if (j == i || j == (n * 2) - i) {
+//       process.stdout.write('* ');
+//     }
+//     else {
+//       process.stdout.write(' ');
+//     }
+//   }
+//   process.stdout.write('\n');
+// }
+
+
+// Butterfly pattern
+let prompt = require('prompt-sync')();
+
+let n = prompt('Enter number: ');
+
+for (let i = 1; i <= n; i++) {
+  
+}
