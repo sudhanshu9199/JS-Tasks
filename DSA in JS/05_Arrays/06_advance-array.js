@@ -132,19 +132,43 @@ Reverse Algorithm
 
 
 
-let arr = [1, 1, 2, 2, 3, 4, 4, 4, 5, 8, 9, 8, 11];
-for (let i = 0; i < arr.length - 1; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-        if (arr[i] === arr[j]) {
-            arr.splice(j, 1);
-            j--;
-        }
-    }
-}
-console.log('Array after removing duplicates:', arr);
+// let arr = [1, 1, 2, 2, 3, 4, 4, 4, 5, 8, 9, 8, 11];
+// for (let i = 0; i < arr.length - 1; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//         if (arr[i] === arr[j]) {
+//             arr.splice(j, 1);
+//             j--;
+//         }
+//     }
+// }
+// console.log('Array after removing duplicates:', arr);
 
 
 
 
 
 /**Q. Merge sorted array. */
+
+
+
+
+// revise
+
+let n = Number(prompt('Enter number: '));
+let copy = n;
+let sum = 0;
+while(n > 0) {
+    let quotent = Math.floor(n /10);
+    let remender = n % 10;
+    let fac = 1;
+    for (let i = 1; i <= remender; i++) {
+        fac*= i;
+    }
+    sum+= fac;
+    n = quotent;
+}
+if (copy === sum) console.log(`${sum} is strong number.`);
+else {
+    console.log(`${sum} is not strong number.`);
+}
+
