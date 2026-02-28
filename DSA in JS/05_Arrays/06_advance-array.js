@@ -154,21 +154,54 @@ Reverse Algorithm
 
 // revise
 
-let n = Number(prompt('Enter number: '));
-let copy = n;
-let sum = 0;
-while(n > 0) {
-    let quotent = Math.floor(n /10);
-    let remender = n % 10;
-    let fac = 1;
-    for (let i = 1; i <= remender; i++) {
-        fac*= i;
-    }
-    sum+= fac;
-    n = quotent;
-}
-if (copy === sum) console.log(`${sum} is strong number.`);
-else {
-    console.log(`${sum} is not strong number.`);
-}
+// let n = Number(prompt('Enter number: '));
+// let copy = n;
+// let sum = 0;
+// while(n > 0) {
+//     let quotent = Math.floor(n /10);
+//     let remender = n % 10;
+//     let fac = 1;
+//     for (let i = 1; i <= remender; i++) {
+//         fac*= i;
+//     }
+//     sum+= fac;
+//     n = quotent;
+// }
+// if (copy === sum) console.log(`${sum} is strong number.`);
+// else {
+//     console.log(`${sum} is not strong number.`);
+// }
 
+
+
+// let size = Number(prompt('Enter array size: '));
+// let arr = new Array(size);
+// for (let i = 0; i < arr.length; i++) {
+//     arr[i] = Number(prompt('Enter element:'));
+// }
+// console.log(arr);
+
+
+// Sum of array's element
+// let size = Number(prompt('Enter array size:'));
+// let arr = new Array(size);
+// let sum = 0;
+// for (let i = 0; i < arr.length; i++) {
+//     arr[i] = Number(prompt('Enter element: '));
+//     sum += arr[i];
+// }
+// console.log(arr);
+// console.log(sum);
+
+
+// Max element from array
+let size = Number(prompt('Enter array size: '));
+let arr = new Array(size);
+for (let i = 0; i < arr.length; i++) {
+    arr[i] = Number(prompt('Enter element: '));
+}
+let max = arr[0];
+for (let j = 1; j < arr.length; j++) {
+    if (arr[j] > max) max = arr[j];
+}
+console.log(max);
