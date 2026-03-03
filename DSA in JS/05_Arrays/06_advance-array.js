@@ -195,13 +195,99 @@ Reverse Algorithm
 
 
 // Max element from array
-let size = Number(prompt('Enter array size: '));
-let arr = new Array(size);
-for (let i = 0; i < arr.length; i++) {
-    arr[i] = Number(prompt('Enter element: '));
+// let size = Number(prompt('Enter array size: '));
+// let arr = new Array(size);
+// for (let i = 0; i < arr.length; i++) {
+//     arr[i] = Number(prompt('Enter element: '));
+// }
+// let max = arr[0];
+// for (let j = 1; j < arr.length; j++) {
+//     if (arr[j] > max) max = arr[j];
+// }
+// console.log(max);
+
+
+// // Min element from array
+// let size = Number(prompt('Enter array size: '));
+// let arr = new Array(size);
+
+// for (let i = 0; i < arr.length; i++) {
+//     arr[i] = Number(prompt('Enter element:'));
+// }
+// console.log(arr);
+// let min = arr[0];
+// for (let j = 1; j < arr.length; j++) {
+//     if (arr[j] < min) min = arr[j];
+// }
+
+// console.log(min);
+
+// // Second minimum element from array
+// let arr = [5, 5, 8];
+// let min = Infinity;
+// let sMin = Infinity;
+// for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] < min) {
+//         sMin = min;
+//         min = arr[i];
+//     }
+//     else if (arr[i] < sMin && arr[i] !== min) {
+//         sMin = arr[i];
+//     }
+// }
+// console.log(sMin);
+
+
+// // Reverse the array
+// let arr = [10, 20, 25, 35, 40, 50];
+// let temp = new Array(arr.length);
+// let i = 0;
+// for (let j = arr.length - 1; j >= 0; j--) {
+//         temp[i] = arr[j];
+//         i++;
+// }
+// console.log(temp);
+
+// let arr = [10, 20, 25, 35, 40, 50];
+// let j = arr.length - 1;
+// for (let i = 0; i < arr.length; i++) {
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//     j--;
+//     if (i === j) break;
+// }
+// console.log(arr);
+
+
+
+// // All zeroes to left and all ones to right.
+// let arr = [0, 1, 1, 0, 1, 0, 0, 1, 1, 0];
+// let j = 0;
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === 0) {
+//         let temp = arr[i];
+//         arr[i] = arr[j];
+//         arr[j] = temp;
+//         j++;
+//     }
+// }
+// console.log(arr);
+
+// Array left rotation by 1.
+// let arr = [10, 20, 25, 35, 40, 50];
+// let first = arr[0];
+// for (let i = 0; i < arr.length - 1; i++) {
+//     arr[i] = arr[i + 1];
+// }
+// arr[arr.length - 1] = first;
+// console.log(arr);
+
+// Array right rotation by 1.
+let arr = [1, 2, 3, 4, 5];
+let last = arr[arr.length - 1];
+for (let i = arr.length - 1; i > 0; i--) {
+    arr[i] = arr[i - 1];
 }
-let max = arr[0];
-for (let j = 1; j < arr.length; j++) {
-    if (arr[j] > max) max = arr[j];
-}
-console.log(max);
+arr[0] = last;
+console.log(arr);
