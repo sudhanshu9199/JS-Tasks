@@ -274,7 +274,7 @@ Reverse Algorithm
 // }
 // console.log(arr);
 
-// Array left rotation by 1.
+// // Array left rotation by 1.
 // let arr = [10, 20, 25, 35, 40, 50];
 // let first = arr[0];
 // for (let i = 0; i < arr.length - 1; i++) {
@@ -283,11 +283,57 @@ Reverse Algorithm
 // arr[arr.length - 1] = first;
 // console.log(arr);
 
-// Array right rotation by 1.
+// // Array right rotation by 1.
+// let arr = [1, 2, 3, 4, 5];
+// let last = arr[arr.length - 1];
+// for (let i = arr.length - 1; i > 0; i--) {
+//     arr[i] = arr[i - 1];
+// }
+// arr[0] = last;
+// console.log(arr);
+
+
+// Array left rotation by k elements.
+// let arr = [1, 2, 3, 4, 5];
+// let k = Number(prompt('Enter rotating Number:'));
+// for (let j = 1; j <= (k % arr.length); j++) {
+//     let first = arr[0];
+//     for (let i = 0; i < arr.length - 1; i++) {
+//         arr[i] = arr[i + 1];
+//     }
+//     arr[arr.length - 1] = first;
+//     console.log(`Rotate ${j} Done!`);
+    
+// }
+// console.log(arr);
+ /** or */
+// let arr = [1, 2, 3, 4, 5];
+// let temp = new Array(arr.length)
+// let k = 2;
+// k = k % arr.length;
+
+// for (let i = 0; i < arr.length; i++) {
+//     temp[i] = arr[(i + k) % arr.length]
+// }
+// console.log(temp);
+ /** or */
 let arr = [1, 2, 3, 4, 5];
-let last = arr[arr.length - 1];
-for (let i = arr.length - 1; i > 0; i--) {
-    arr[i] = arr[i - 1];
-}
-arr[0] = last;
+let k = 2;
+k = k % arr.length
+
+reverse(arr, 0, k - 1);
+reverse(arr, k, arr.length - 1);
+reverse(arr, 0, arr.length - 1);
+
 console.log(arr);
+
+function reverse(arr, i, j) {
+    while(i < j) {
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        i++; j--;
+    }
+}
+
+// Linear Search an array - If element found print the index else -1.
