@@ -317,23 +317,48 @@ Reverse Algorithm
 // }
 // console.log(temp);
  /** or */
-let arr = [1, 2, 3, 4, 5];
-let k = 2;
-k = k % arr.length
+// let arr = [1, 2, 3, 4, 5];
+// let k = 2;
+// k = k % arr.length
 
-reverse(arr, 0, k - 1);
-reverse(arr, k, arr.length - 1);
-reverse(arr, 0, arr.length - 1);
+// reverse(arr, 0, k - 1);
+// reverse(arr, k, arr.length - 1);
+// reverse(arr, 0, arr.length - 1);
 
-console.log(arr);
+// console.log(arr);
 
-function reverse(arr, i, j) {
-    while(i < j) {
-        let temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        i++; j--;
-    }
-}
+// function reverse(arr, i, j) {
+//     while(i < j) {
+//         let temp = arr[i];
+//         arr[i] = arr[j];
+//         arr[j] = temp;
+//         i++; j--;
+//     }
+// }
 
-// Linear Search an array - If element found print the index else -1.
+
+// Array right rotation by k elements.
+// let arr = [2, 3, 4, 5, 6];
+
+
+
+// // Linear Search an array - If element found print the index else -1.
+// Time complexity is o(n) and space complexity is o(1);
+// let arr = [10, 5, 3, 15, 5, 26, 17];
+// let target = 50;
+// let index = -1;
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === target) {
+//         index = i;
+//         break;
+//     }
+// }
+
+// if (index == -1) console.log(`${target} is not found!`);
+// else console.log(`${target} get on [${index}] Index.`);
+
+
+
+// // Binary Search
+
+// let arr = [10, 5, 3, 15, 5, 26, 17];
