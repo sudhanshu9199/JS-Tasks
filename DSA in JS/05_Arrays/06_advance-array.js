@@ -361,4 +361,20 @@ Reverse Algorithm
 
 // // Binary Search
 
-// let arr = [10, 5, 3, 15, 5, 26, 17];
+let arr = [3, 10, 5, 15, 17, 25, 26];
+
+if (binarySearch(arr, 310) == -1) console.log('not found!');
+else console.log('element found');
+
+
+
+function binarySearch(arr, target) {
+    let start = 0, end = arr.length - 1;
+    while(start<= end) {
+        let mid = Math.floor((start + end) / 2);
+        if (arr[mid] == target) return mid;
+        else if (arr[mid] > target) end = mid - 1;
+        else start = mid + 1;
+    }
+    return -1;
+}
