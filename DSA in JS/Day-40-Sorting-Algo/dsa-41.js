@@ -12,7 +12,6 @@
 // }
 // console.log(arr);
 
-
 /** Selection sort */
 
 // let arr = [1, 4, 3, 2, 9, 10];
@@ -31,7 +30,6 @@
 // }
 // console.log(arr);
 
-
 /* Insertion sort */
 
 // let arr = [1, 4, 3, 9, 2, 10];
@@ -45,3 +43,25 @@
 //     arr[j + 1] = key;
 // }
 // console.log(arr);
+
+
+
+// revise
+// Bubble Sort
+// let arr = [5, 3, 1, 9, 7];
+
+// let i = 0;
+// while (arr.length - 1 > i) {
+//   for (let j = 0; j < arr.length - i - 1; j++) {
+//     if (arr[j] > arr[j + 1]) {
+//       [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+//     }
+//   }
+//   i++;
+// }
+
+// console.log(arr);
+
+
+// Selection sort
+let arr = [5, 3, 1, 9, 7];
