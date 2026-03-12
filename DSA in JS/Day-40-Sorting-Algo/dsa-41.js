@@ -65,3 +65,15 @@
 
 // Selection sort
 let arr = [5, 3, 1, 9, 7];
+
+for (let i = 0; i < arr.length - 1; i++) {
+    let minIdx = i;
+    for(let j = i+1; j < arr.length; j++) {
+        if (arr[minIdx] > arr[j]) {
+            minIdx = j
+        }
+    }
+    [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]];
+
+}
+console.log(arr);
