@@ -361,20 +361,67 @@ Reverse Algorithm
 
 // // Binary Search
 
-let arr = [3, 10, 5, 15, 17, 25, 26];
+// let arr = [3, 10, 5, 15, 17, 25, 26];
 
-if (binarySearch(arr, 310) == -1) console.log('not found!');
-else console.log('element found');
+// if (binarySearch(arr, 310) == -1) console.log('not found!');
+// else console.log('element found');
 
 
 
-function binarySearch(arr, target) {
-    let start = 0, end = arr.length - 1;
-    while(start<= end) {
-        let mid = Math.floor((start + end) / 2);
-        if (arr[mid] == target) return mid;
-        else if (arr[mid] > target) end = mid - 1;
-        else start = mid + 1;
+// function binarySearch(arr, target) {
+//     let start = 0, end = arr.length - 1;
+//     while(start<= end) {
+//         let mid = Math.floor((start + end) / 2);
+//         if (arr[mid] == target) return mid;
+//         else if (arr[mid] > target) end = mid - 1;
+//         else start = mid + 1;
+//     }
+//     return -1;
+// }
+
+
+// Bubble Sort
+// let arr = [5, 3, 1, 9, 7];
+
+// let i = 0;
+// while(arr.length - 1 >  i) {
+//     for (let j = 0; j < arr.length - i - 1; j++) {
+//         if (arr[j] > arr[j + 1]) {
+//             [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
+//         }
+//     }
+//     i++;
+// }
+// console.log(arr);
+
+
+// selection sort
+// let arr = [5, 3, 1, 9, 7];
+// let i = 0;
+
+// for (let i = 0; i < arr.length - 1; i++) {
+//     let small = i;
+//     for (let j = i+1; j < arr.length; j++) {
+//         if (arr[small] > arr[j]) {
+//             small = j;
+//         }
+//     }
+//     if (i != small) {
+//         [arr[i], arr[small]] = [arr[small], arr[i]]
+//     }
+// }
+// console.log(arr);
+
+// Inserstion sort
+
+let arr = [2, 10, 3, 5, 15, 9];
+for (let i = 1; i < arr.length; i++) {
+    let key = arr[i]
+    let j = i - 1;
+    while (j >= 0 && arr[j] > key) {
+        arr[j + 1] = arr[j];
+        j--;
     }
-    return -1;
+    arr[j + 1] = key;
 }
+console.log(arr);

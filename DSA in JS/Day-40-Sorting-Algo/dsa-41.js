@@ -73,7 +73,9 @@ for (let i = 0; i < arr.length - 1; i++) {
             minIdx = j
         }
     }
-    [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]];
+
+    if (i !== minIdx) [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]];
+    
 
 }
 console.log(arr);
