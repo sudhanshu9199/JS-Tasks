@@ -64,18 +64,36 @@
 
 
 // Selection sort
-let arr = [5, 3, 1, 9, 7];
+// let arr = [5, 3, 1, 9, 7];
 
-for (let i = 0; i < arr.length - 1; i++) {
-    let minIdx = i;
-    for(let j = i+1; j < arr.length; j++) {
-        if (arr[minIdx] > arr[j]) {
-            minIdx = j
-        }
-    }
+// for (let i = 0; i < arr.length - 1; i++) {
+//     let minIdx = i;
+//     for(let j = i+1; j < arr.length; j++) {
+//         if (arr[minIdx] > arr[j]) {
+//             minIdx = j
+//         }
+//     }
 
-    if (i !== minIdx) [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]];
+//     if (i !== minIdx) [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]];
     
 
-}
-console.log(arr);
+// }
+// console.log(arr);
+
+
+
+// let arr = [5, 3, 1, 9, 7];
+
+// let i = 0;
+// while (arr.length - 1 > i) {
+//     for (let j = 0; j < arr.length - i - 1; j++) {
+//         if (arr[j] > arr[j+1]) {
+//             [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
+//         }
+//     }
+//     i++;
+// }
+// console.log(arr);
+
+
+let arr = [5, 3, 1, 9, 7];
