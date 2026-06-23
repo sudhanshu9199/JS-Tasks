@@ -58,6 +58,75 @@
 
 // One-Liner Code for Creating a 2D Array
 
-let arr = Array.from({length:3}, () => Array(4).fill(2))
+// let arr = Array.from({length:3}, () => Array(4).fill(2))
 
-console.log(arr);
+// console.log(arr);
+
+
+
+// Revise
+
+// let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+// for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr[i].length; j++ ){
+//         console.log(arr[i][j]);
+//     }
+// }
+
+
+// let outerSize = Number(prompt('Enter outer array size:'));
+// let outerArray = new Array(outerSize);
+
+// for (let i = 0; i < outerArray.length; i++) {
+//     outerArray[i] = new Array(i+1);
+// }
+
+// for (let i = 0; i < outerArray.length; i++) {
+//     for (let j = 0; j < outerArray[i].length; j++) {
+//         outerArray[i][j] = Number(prompt(`Enter element of index [${i}][${j}]: ${outerArray[i][j]}`));
+//     }
+// }
+// console.log(outerArray);
+
+
+
+
+// let arr = [
+//     [1,2,3],
+//     [4,5,6],
+//     [7,8,9]
+// ]
+
+// let leftSum = 0;
+// let rightSum = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr[i].length; j++) {
+//         if (i == j) leftSum += arr[i][j];
+//         if (i+j == arr.length - 1) rightSum += arr[i][j];
+//     }
+// }
+// console.log(`left diagonal sum: ${leftSum} and right diagonal sum: ${rightSum}`);
+
+
+
+// let arr = new Array(4);
+// for (let i = 0; i < arr.length; i++) {
+//     let size = Number(prompt(`Enter inner ${i} aray's size:`));
+//     arr[i] = new Array(size);
+// }
+
+// for(let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr[i].length; j++) {
+//         arr[i][j] = Number(prompt(`Enter inner index ${i}:${j} value:`));
+//     }
+// }
+// console.log(arr);
+
+
+
+/* One line array create */
+
+// let arr = Array.from({length: 3}, () => Array(4).fill(0))
+// console.log(arr);
