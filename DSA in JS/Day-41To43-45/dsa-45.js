@@ -1,5 +1,3 @@
-
-
 // /**LeetCode Matrix Problems (Q31–Q34) */
 /* Q. 867. Transpose Matrix */
 // let matrix = [[2,4,-1], [-10,5,11], [18,-7,6]]
@@ -25,7 +23,6 @@
 //     }
 // }
 // console.log(ans);
-
 
 /* Q 48. Rotate Image  */
 
@@ -62,8 +59,6 @@
 // }
 // }
 // console.log(matrix);
-
-
 
 /** Q. 54. Spiral Matrix */
 // let arr = [
@@ -111,3 +106,87 @@
 
 // console.log(result);
 
+/** revise */
+
+/* Q. 867. Transpose Matrix */
+// let matrix = [
+//   [2, 4, -1],
+//   [-10, 5, 11],
+//   [18, -7, 6],
+// ];
+// let ans =  Array.from({length: matrix[0].length}, () => Array(matrix.length));
+
+// for (let i = 0; i < ans.length; i++) {
+//     for (let j = 0; j < ans.length; j++) {
+//         ans[i][j] = matrix[i][j];
+//     }
+// }
+// console.log(ans);
+
+// console.table(matrix)
+// for (let i = 0; i < matrix.length; i++) {
+//     for (let j = i + 1; j < matrix.length; j++) {
+//         let temp = matrix[i][j];
+//         matrix[i][j] = matrix[j][i];
+//         matrix[j][i] = temp;
+//     }
+// }
+// console.table(matrix);
+
+// let ans = Array.from({length: matrix[0].length}, () => Array(matrix.length));
+// for (let i = 0; i < matrix.length; i++) {
+//     for (let j = 0; j < ans[i].length; j++) {
+//         ans[i][j] = matrix[j][i];
+//     }
+// }
+// console.log(ans);
+
+// or
+
+// let matrix = [
+//   [2, 4, -1],
+//   [-10, 5, 11],
+//   [18, -7, 6],
+// ];
+// let row = matrix.length;
+// let col = matrix[0].length;
+// let ans = new Array(col);
+// for (let i = 0; i < ans.length; i++) {
+//   ans[i] = new Array(row);
+// }
+
+// for (let i = 0; i < ans.length; i++) {
+//   for (let j = 0; j < ans[i].length; j++) {
+//     ans[i][j] = matrix[j][i];
+//   }
+// }
+
+// console.log(ans);
+
+/** rotate image */
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+for (let i = 0; i < matrix.length; i++) {
+  for (let j = i + 1; j < matrix[i].length; j++) {
+    let temp = matrix[i][j];
+    matrix[i][j] = matrix[j][i];
+    matrix[j][i] = temp;
+  }
+}
+console.log(matrix);
+
+for (let i = 0; i < matrix.length; i++) {
+  let k = 0,
+    j = matrix[i].length - 1;
+  while (k < j) {
+    let temp = matrix[i][k];
+    matrix[i][k] = matrix[i][j];
+    matrix[i][j] = temp;
+    (k++, j--);
+  }
+}
+console.log(matrix);
